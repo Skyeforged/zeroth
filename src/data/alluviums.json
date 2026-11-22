@@ -1,0 +1,444 @@
+[
+  {
+    "id": "marker_stone",
+    "slot2Pool": [
+      "atk",
+      "physical_dmg",
+      "heat_dmg",
+      "electric_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "ult_efficiency",
+      "arts_dmg"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "flow",
+      "twilight",
+      "infliction",
+      "brutality",
+      "inspiring",
+      "pursuit",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "north_wuling_exclusion_zone",
+    "slot2Pool": [
+      "hp",
+      "physical_dmg",
+      "heat_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "arts_intensity",
+      "arts_dmg",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "medicant",
+      "infliction",
+      "inspiring",
+      "crusher",
+      "pursuit",
+      "suppression",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "origin_lodespring",
+    "slot2Pool": [
+      "hp",
+      "physical_dmg",
+      "heat_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "arts_intensity",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "twilight",
+      "detonate",
+      "infliction",
+      "brutality",
+      "combative",
+      "suppression",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "originium_science_park",
+    "slot2Pool": [
+      "atk",
+      "physical_dmg",
+      "electric_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "ult_efficiency",
+      "arts_dmg"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "fracture",
+      "medicant",
+      "infliction",
+      "combative",
+      "inspiring",
+      "pursuit",
+      "suppression"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "power_plateau",
+    "slot2Pool": [
+      "atk",
+      "hp",
+      "physical_dmg",
+      "heat_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "arts_intensity",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "flow",
+      "fracture",
+      "medicant",
+      "infliction",
+      "brutality",
+      "inspiring",
+      "crusher",
+      "pursuit"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "qingbo_stockade",
+    "slot2Pool": [
+      "hp",
+      "physical_dmg",
+      "electric_dmg",
+      "cryo_dmg",
+      "arts_intensity",
+      "ult_efficiency",
+      "arts_dmg",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "twilight",
+      "detonate",
+      "fracture",
+      "medicant",
+      "combative",
+      "inspiring",
+      "crusher",
+      "suppression"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "sis_painting",
+    "slot2Pool": [
+      "atk",
+      "physical_dmg",
+      "heat_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "arts_intensity",
+      "ult_efficiency"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "flow",
+      "detonate",
+      "fracture",
+      "infliction",
+      "combative",
+      "pursuit",
+      "suppression"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "snowy_forest",
+    "slot2Pool": [
+      "atk",
+      "hp",
+      "heat_dmg",
+      "electric_dmg",
+      "critical_rate",
+      "ult_efficiency",
+      "arts_dmg",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "flow",
+      "twilight",
+      "detonate",
+      "medicant",
+      "brutality",
+      "inspiring",
+      "crusher",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "sword_vault_dale",
+    "slot2Pool": [
+      "atk",
+      "hp",
+      "physical_dmg",
+      "heat_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "arts_intensity",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "detonate",
+      "fracture",
+      "medicant",
+      "combative",
+      "inspiring",
+      "pursuit",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "test_area",
+    "slot2Pool": [
+      "hp",
+      "heat_dmg",
+      "electric_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "arts_intensity",
+      "ult_efficiency",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "flow",
+      "twilight",
+      "fracture",
+      "infliction",
+      "brutality",
+      "combative",
+      "crusher",
+      "suppression"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "the_hub",
+    "slot2Pool": [
+      "atk",
+      "heat_dmg",
+      "electric_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "arts_intensity",
+      "ult_efficiency",
+      "arts_dmg"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "flow",
+      "detonate",
+      "combative",
+      "crusher",
+      "pursuit",
+      "suppression",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "wuling_city",
+    "slot2Pool": [
+      "atk",
+      "hp",
+      "electric_dmg",
+      "cryo_dmg",
+      "critical_rate",
+      "ult_efficiency",
+      "arts_dmg",
+      "treatment_efficiency"
+    ],
+    "slot3Pool": [
+      "flow",
+      "twilight",
+      "detonate",
+      "fracture",
+      "medicant",
+      "brutality",
+      "crusher",
+      "assault"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  },
+  {
+    "id": "yinglung_pass",
+    "slot2Pool": [
+      "atk",
+      "physical_dmg",
+      "electric_dmg",
+      "cryo_dmg",
+      "nature_dmg",
+      "critical_rate",
+      "arts_intensity",
+      "arts_dmg"
+    ],
+    "slot3Pool": [
+      "efficacy",
+      "flow",
+      "detonate",
+      "infliction",
+      "brutality",
+      "combative",
+      "pursuit",
+      "suppression"
+    ],
+    "sourceRefs": [
+      {
+        "id": "wiki-gg-energy-alluvium",
+        "label": "Endfield Talos Wiki Energy Alluvium page",
+        "url": "https://endfield.wiki.gg/wiki/Energy_Alluvium",
+        "retrievedOn": "2026-11-22",
+        "confidence": "community",
+        "revisionId": 79322,
+        "notes": "slot3Pool from the Flawless Essence skills listed for the location. The page has no slot-2 data; slot2Pool is entered by hand."
+      }
+    ]
+  }
+]

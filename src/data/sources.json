@@ -1,0 +1,1356 @@
+{
+  "sources": [
+    {
+      "id": "wiki-gg-aggeloslayer",
+      "label": "Endfield Talos Wiki Aggeloslayer page",
+      "url": "https://endfield.wiki.gg/wiki/Aggeloslayer",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61856
+    },
+    {
+      "id": "wiki-gg-amaranthine_tassel",
+      "label": "Endfield Talos Wiki Amaranthine Tassel page",
+      "url": "https://endfield.wiki.gg/wiki/Amaranthine_Tassel",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61826
+    },
+    {
+      "id": "wiki-gg-ancient_canal",
+      "label": "Endfield Talos Wiki Ancient Canal page",
+      "url": "https://endfield.wiki.gg/wiki/Ancient_Canal",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61822
+    },
+    {
+      "id": "wiki-gg-artzy_tyrannical",
+      "label": "Endfield Talos Wiki Artzy Tyrannical page",
+      "url": "https://endfield.wiki.gg/wiki/Artzy_Tyrannical",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61874
+    },
+    {
+      "id": "wiki-gg-aspirant",
+      "label": "Endfield Talos Wiki Aspirant page",
+      "url": "https://endfield.wiki.gg/wiki/Aspirant",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61888
+    },
+    {
+      "id": "wiki-gg-beacon_of_duty",
+      "label": "Endfield Talos Wiki Beacon of Duty page",
+      "url": "https://endfield.wiki.gg/wiki/Beacon_of_Duty",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61855
+    },
+    {
+      "id": "wiki-gg-bedazzling_night_debut",
+      "label": "Endfield Talos Wiki Bedazzling Night Debut page",
+      "url": "https://endfield.wiki.gg/wiki/Bedazzling_Night_Debut",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61862
+    },
+    {
+      "id": "wiki-gg-blessing_of_lustrous_carmine",
+      "label": "Endfield Talos Wiki Blessing of Lustrous Carmine page",
+      "url": "https://endfield.wiki.gg/wiki/Blessing_of_Lustrous_Carmine",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61863
+    },
+    {
+      "id": "wiki-gg-brigands_calling",
+      "label": "Endfield Talos Wiki Brigand's Calling page",
+      "url": "https://endfield.wiki.gg/wiki/Brigand's_Calling",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61875
+    },
+    {
+      "id": "wiki-gg-category-weapons",
+      "label": "Endfield Talos Wiki Weapons category (MediaWiki API)",
+      "url": "https://endfield.wiki.gg/wiki/Category:Weapons",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "Weapon list discovered from Category:Weapons. Each weapon is parsed from its page: the Weapon infobox (rarity, type, internal name, icon image) and the Weapon skill template (the three essence stats)."
+    },
+    {
+      "id": "wiki-gg-chimeric_justice",
+      "label": "Endfield Talos Wiki Chimeric Justice page",
+      "url": "https://endfield.wiki.gg/wiki/Chimeric_Justice",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61853
+    },
+    {
+      "id": "wiki-gg-chivalric_virtues",
+      "label": "Endfield Talos Wiki Chivalric Virtues page",
+      "url": "https://endfield.wiki.gg/wiki/Chivalric_Virtues",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61839
+    },
+    {
+      "id": "wiki-gg-clannibal",
+      "label": "Endfield Talos Wiki Clannibal page",
+      "url": "https://endfield.wiki.gg/wiki/Clannibal",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61873
+    },
+    {
+      "id": "wiki-gg-cohesive_traction",
+      "label": "Endfield Talos Wiki Cohesive Traction page",
+      "url": "https://endfield.wiki.gg/wiki/Cohesive_Traction",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61854
+    },
+    {
+      "id": "wiki-gg-complexed_industry",
+      "label": "Endfield Talos Wiki Complexed Industry page",
+      "url": "https://endfield.wiki.gg/wiki/Complexed_Industry",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 64965
+    },
+    {
+      "id": "wiki-gg-darhoff_7",
+      "label": "Endfield Talos Wiki Darhoff 7 page",
+      "url": "https://endfield.wiki.gg/wiki/Darhoff_7",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65351
+    },
+    {
+      "id": "wiki-gg-delivery_guaranteed",
+      "label": "Endfield Talos Wiki Delivery Guaranteed page",
+      "url": "https://endfield.wiki.gg/wiki/Delivery_Guaranteed",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61840
+    },
+    {
+      "id": "wiki-gg-dessert_moment",
+      "label": "Endfield Talos Wiki Dessert Moment page",
+      "url": "https://endfield.wiki.gg/wiki/Dessert_Moment",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65354
+    },
+    {
+      "id": "wiki-gg-detonation_unit",
+      "label": "Endfield Talos Wiki Detonation Unit page",
+      "url": "https://endfield.wiki.gg/wiki/Detonation_Unit",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61837
+    },
+    {
+      "id": "wiki-gg-dreams_of_the_starry_beach",
+      "label": "Endfield Talos Wiki Dreams of the Starry Beach page",
+      "url": "https://endfield.wiki.gg/wiki/Dreams_of_the_Starry_Beach",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61842
+    },
+    {
+      "id": "wiki-gg-eminent_repute",
+      "label": "Endfield Talos Wiki Eminent Repute page",
+      "url": "https://endfield.wiki.gg/wiki/Eminent_Repute",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61886
+    },
+    {
+      "id": "wiki-gg-exemplar",
+      "label": "Endfield Talos Wiki Exemplar page",
+      "url": "https://endfield.wiki.gg/wiki/Exemplar",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61806
+    },
+    {
+      "id": "wiki-gg-farsight",
+      "label": "Endfield Talos Wiki Farsight page",
+      "url": "https://endfield.wiki.gg/wiki/Farsight",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65353
+    },
+    {
+      "id": "wiki-gg-finchaser_3_0",
+      "label": "Endfield Talos Wiki Finchaser 3.0 page",
+      "url": "https://endfield.wiki.gg/wiki/Finchaser_3.0",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61893
+    },
+    {
+      "id": "wiki-gg-finishing_call",
+      "label": "Endfield Talos Wiki Finishing Call page",
+      "url": "https://endfield.wiki.gg/wiki/Finishing_Call",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61818
+    },
+    {
+      "id": "wiki-gg-flickers_in_the_mist",
+      "label": "Endfield Talos Wiki Flickers in the Mist page",
+      "url": "https://endfield.wiki.gg/wiki/Flickers_in_the_Mist",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61848
+    },
+    {
+      "id": "wiki-gg-fluorescent_roc",
+      "label": "Endfield Talos Wiki Fluorescent Roc page",
+      "url": "https://endfield.wiki.gg/wiki/Fluorescent_Roc",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61829
+    },
+    {
+      "id": "wiki-gg-forgeborn_scathe",
+      "label": "Endfield Talos Wiki Forgeborn Scathe page",
+      "url": "https://endfield.wiki.gg/wiki/Forgeborn_Scathe",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 67091
+    },
+    {
+      "id": "wiki-gg-former_finery",
+      "label": "Endfield Talos Wiki Former Finery page",
+      "url": "https://endfield.wiki.gg/wiki/Former_Finery",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61809
+    },
+    {
+      "id": "wiki-gg-fortmaker",
+      "label": "Endfield Talos Wiki Fortmaker page",
+      "url": "https://endfield.wiki.gg/wiki/Fortmaker",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61880
+    },
+    {
+      "id": "wiki-gg-freedom_to_proselytize",
+      "label": "Endfield Talos Wiki Freedom to Proselytize page",
+      "url": "https://endfield.wiki.gg/wiki/Freedom_to_Proselytize",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61841
+    },
+    {
+      "id": "wiki-gg-glorious_memory",
+      "label": "Endfield Talos Wiki Glorious Memory page",
+      "url": "https://endfield.wiki.gg/wiki/Glorious_Memory",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61890
+    },
+    {
+      "id": "wiki-gg-golden_age",
+      "label": "Endfield Talos Wiki Golden Age page",
+      "url": "https://endfield.wiki.gg/wiki/Golden_Age",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61864
+    },
+    {
+      "id": "wiki-gg-grand_vision",
+      "label": "Endfield Talos Wiki Grand Vision page",
+      "url": "https://endfield.wiki.gg/wiki/Grand_Vision",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61894
+    },
+    {
+      "id": "wiki-gg-home_longing",
+      "label": "Endfield Talos Wiki Home Longing page",
+      "url": "https://endfield.wiki.gg/wiki/Home_Longing",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61871
+    },
+    {
+      "id": "wiki-gg-howling_guard",
+      "label": "Endfield Talos Wiki Howling Guard page",
+      "url": "https://endfield.wiki.gg/wiki/Howling_Guard",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61866
+    },
+    {
+      "id": "wiki-gg-hypernova_auto",
+      "label": "Endfield Talos Wiki Hypernova Auto page",
+      "url": "https://endfield.wiki.gg/wiki/Hypernova_Auto",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61827
+    },
+    {
+      "id": "wiki-gg-icon-aggeloslayer",
+      "label": "Endfield Talos Wiki Aggeloslayer icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Aggeloslayer_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 ea9444851a92dcec4aebdb8ec509fb832033f9f7. Saved as public/weapons/aggeloslayer.png."
+    },
+    {
+      "id": "wiki-gg-icon-amaranthine_tassel",
+      "label": "Endfield Talos Wiki Amaranthine Tassel icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Amaranthine_Tassel_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 b4721f000ca506f214959d9eb64723e3a95c3571. Saved as public/weapons/amaranthine_tassel.png."
+    },
+    {
+      "id": "wiki-gg-icon-ancient_canal",
+      "label": "Endfield Talos Wiki Ancient Canal icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Ancient_Canal_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 7407c652e61688dd9c316b8e4a9c455613e702d1. Saved as public/weapons/ancient_canal.png."
+    },
+    {
+      "id": "wiki-gg-icon-artzy_tyrannical",
+      "label": "Endfield Talos Wiki Artzy Tyrannical icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Artzy_Tyrannical_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f3de6101b7a559f8b5943590e9cde1d6ea5fec8c. Saved as public/weapons/artzy_tyrannical.png."
+    },
+    {
+      "id": "wiki-gg-icon-aspirant",
+      "label": "Endfield Talos Wiki Aspirant icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Aspirant_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 9d6460a79824ec8c8b2e4569edf046e0a5e58139. Saved as public/weapons/aspirant.png."
+    },
+    {
+      "id": "wiki-gg-icon-beacon_of_duty",
+      "label": "Endfield Talos Wiki Beacon of Duty icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Beacon_of_Duty_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 44fdc74dd8c19fea60e7ef0313ea18ce009c896b. Saved as public/weapons/beacon_of_duty.png."
+    },
+    {
+      "id": "wiki-gg-icon-bedazzling_night_debut",
+      "label": "Endfield Talos Wiki Bedazzling Night Debut icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Bedazzling_Night_Debut_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 77b290ba481b1b637e8840675528927b96d8319e. Saved as public/weapons/bedazzling_night_debut.png."
+    },
+    {
+      "id": "wiki-gg-icon-blessing_of_lustrous_carmine",
+      "label": "Endfield Talos Wiki Blessing of Lustrous Carmine icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Blessing_of_Lustrous_Carmine_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 6a1484a3e38da3b10fb9e40f3b559e79218be2b3. Saved as public/weapons/blessing_of_lustrous_carmine.png."
+    },
+    {
+      "id": "wiki-gg-icon-brigands_calling",
+      "label": "Endfield Talos Wiki Brigand's Calling icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Brigand's_Calling_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 093146c8777732790e8c27873d21b3e9097bb406. Saved as public/weapons/brigands_calling.png."
+    },
+    {
+      "id": "wiki-gg-icon-chimeric_justice",
+      "label": "Endfield Talos Wiki Chimeric Justice icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Chimeric_Justice_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 6ac63afaadd83fc6d8bec14a790775ca63e44ed6. Saved as public/weapons/chimeric_justice.png."
+    },
+    {
+      "id": "wiki-gg-icon-chivalric_virtues",
+      "label": "Endfield Talos Wiki Chivalric Virtues icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Chivalric_Virtues_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 97d9819783ca87d41c61e84a9c94a3c48c4f48b5. Saved as public/weapons/chivalric_virtues.png."
+    },
+    {
+      "id": "wiki-gg-icon-clannibal",
+      "label": "Endfield Talos Wiki Clannibal icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Clannibal_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 cc0dcdcbb3af5b74f211c5367d12c993daed0e71. Saved as public/weapons/clannibal.png."
+    },
+    {
+      "id": "wiki-gg-icon-cohesive_traction",
+      "label": "Endfield Talos Wiki Cohesive Traction icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Cohesive_Traction_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 1cec26d76c4563e3db9c88897d60c7549313c98b. Saved as public/weapons/cohesive_traction.png."
+    },
+    {
+      "id": "wiki-gg-icon-complexed_industry",
+      "label": "Endfield Talos Wiki Complexed Industry icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Complexed_Industry_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 5588674fed0c80a3d772f20ee3064aa25d44080c. Saved as public/weapons/complexed_industry.png."
+    },
+    {
+      "id": "wiki-gg-icon-darhoff_7",
+      "label": "Endfield Talos Wiki Darhoff 7 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Darhoff_7_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 127bd293775f7ed4c2fe730ad2cef07353f7708f. Saved as public/weapons/darhoff_7.png."
+    },
+    {
+      "id": "wiki-gg-icon-delivery_guaranteed",
+      "label": "Endfield Talos Wiki Delivery Guaranteed icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Delivery_Guaranteed_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f54227b527347fc1581a6fc2e964e72c1e4be0e5. Saved as public/weapons/delivery_guaranteed.png."
+    },
+    {
+      "id": "wiki-gg-icon-dessert_moment",
+      "label": "Endfield Talos Wiki Dessert Moment icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Dessert_Moment_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 9f59126fdb4cf923cdf2f38d4591f55a58c8adae. Saved as public/weapons/dessert_moment.png."
+    },
+    {
+      "id": "wiki-gg-icon-detonation_unit",
+      "label": "Endfield Talos Wiki Detonation Unit icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Detonation_Unit_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 63e061eba97ec48d8a5887f3ce879d157f589d47. Saved as public/weapons/detonation_unit.png."
+    },
+    {
+      "id": "wiki-gg-icon-dreams_of_the_starry_beach",
+      "label": "Endfield Talos Wiki Dreams of the Starry Beach icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Dreams_of_the_Starry_Beach_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 875f3e0f707152c183568f7961bb73d24b4eec35. Saved as public/weapons/dreams_of_the_starry_beach.png."
+    },
+    {
+      "id": "wiki-gg-icon-eminent_repute",
+      "label": "Endfield Talos Wiki Eminent Repute icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Eminent_Repute_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 4a08f8d5914c3b6916459abaed1d41ea4a79f68e. Saved as public/weapons/eminent_repute.png."
+    },
+    {
+      "id": "wiki-gg-icon-exemplar",
+      "label": "Endfield Talos Wiki Exemplar icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Exemplar_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 df5afbaa895b8b93bce957527cdc6e3c1e9adf3c. Saved as public/weapons/exemplar.png."
+    },
+    {
+      "id": "wiki-gg-icon-farsight",
+      "label": "Endfield Talos Wiki Farsight icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Farsight_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 73ffe730208238f385489f3c2a907c50c0e3b40b. Saved as public/weapons/farsight.png."
+    },
+    {
+      "id": "wiki-gg-icon-finchaser_3_0",
+      "label": "Endfield Talos Wiki Finchaser 3.0 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Finchaser_3.0_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 7e505c8decd9af18ad6221fc5d6d6f776157112e. Saved as public/weapons/finchaser_3_0.png."
+    },
+    {
+      "id": "wiki-gg-icon-finishing_call",
+      "label": "Endfield Talos Wiki Finishing Call icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Finishing_Call_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 229638a7c3c10690b4163daeaea5e8042cb65694. Saved as public/weapons/finishing_call.png."
+    },
+    {
+      "id": "wiki-gg-icon-flickers_in_the_mist",
+      "label": "Endfield Talos Wiki Flickers in the Mist icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Flickers_in_the_Mist_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 d35450c86eb44501fc66fdb3bd85456afd0cd95d. Saved as public/weapons/flickers_in_the_mist.png."
+    },
+    {
+      "id": "wiki-gg-icon-fluorescent_roc",
+      "label": "Endfield Talos Wiki Fluorescent Roc icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Fluorescent_Roc_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 deecb17e0db41ee0274c4b78c314f15bb7b10ea9. Saved as public/weapons/fluorescent_roc.png."
+    },
+    {
+      "id": "wiki-gg-icon-forgeborn_scathe",
+      "label": "Endfield Talos Wiki Forgeborn Scathe icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Forgeborn_Scathe_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 41780fb37a1fc5b327d4fd8d1e8ae130869b1057. Saved as public/weapons/forgeborn_scathe.png."
+    },
+    {
+      "id": "wiki-gg-icon-former_finery",
+      "label": "Endfield Talos Wiki Former Finery icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Former_Finery_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 50626d77fad6a843d2e96bbbf670c7e66bc4c886. Saved as public/weapons/former_finery.png."
+    },
+    {
+      "id": "wiki-gg-icon-fortmaker",
+      "label": "Endfield Talos Wiki Fortmaker icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Fortmaker_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 3d1551ed3c308a3827bb413c0ba03600e8d0ddba. Saved as public/weapons/fortmaker.png."
+    },
+    {
+      "id": "wiki-gg-icon-freedom_to_proselytize",
+      "label": "Endfield Talos Wiki Freedom to Proselytize icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Freedom_to_Proselytize_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 db61fc8b78b60c33ad4102ef44a2027a06d47fe8. Saved as public/weapons/freedom_to_proselytize.png."
+    },
+    {
+      "id": "wiki-gg-icon-glorious_memory",
+      "label": "Endfield Talos Wiki Glorious Memory icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Glorious_Memory_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 75be071f64a05319e8a07d42ee67659b1f47b630. Saved as public/weapons/glorious_memory.png."
+    },
+    {
+      "id": "wiki-gg-icon-golden_age",
+      "label": "Endfield Talos Wiki Golden Age icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Golden_Age_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 2182c0791f9c0bbdb95c2c2284d8779d7408c3bf. Saved as public/weapons/golden_age.png."
+    },
+    {
+      "id": "wiki-gg-icon-grand_vision",
+      "label": "Endfield Talos Wiki Grand Vision icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Grand_Vision_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 cacb7967bd569cf56064e2c0f7ff1281bd00cb80. Saved as public/weapons/grand_vision.png."
+    },
+    {
+      "id": "wiki-gg-icon-home_longing",
+      "label": "Endfield Talos Wiki Home Longing icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Home_Longing_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 b2b21a1814b8912ea642188520c7dc0df2b0d5ab. Saved as public/weapons/home_longing.png."
+    },
+    {
+      "id": "wiki-gg-icon-howling_guard",
+      "label": "Endfield Talos Wiki Howling Guard icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Howling_Guard_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 02a3ac969f9b4bd0823e6a8f7157cff2b505b35f. Saved as public/weapons/howling_guard.png."
+    },
+    {
+      "id": "wiki-gg-icon-hypernova_auto",
+      "label": "Endfield Talos Wiki Hypernova Auto icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Hypernova_Auto_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 6b375e73bb14e7de861f0540be7414dbcbbe3da5. Saved as public/weapons/hypernova_auto.png."
+    },
+    {
+      "id": "wiki-gg-icon-industry_0_1",
+      "label": "Endfield Talos Wiki Industry 0.1 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Industry_0.1_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 d843dcf4da41292edb8046c4692c9ef0b54e941e. Saved as public/weapons/industry_0_1.png."
+    },
+    {
+      "id": "wiki-gg-icon-jade_vessel",
+      "label": "Endfield Talos Wiki Jade Vessel icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Jade_Vessel_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 64f2b4af76b7e5573d31a83a253072407bc808b4. Saved as public/weapons/jade_vessel.png."
+    },
+    {
+      "id": "wiki-gg-icon-jet",
+      "label": "Endfield Talos Wiki JET icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:JET_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 64b0877aefd771ab6c9b5fda1cd0be5bd49a711a. Saved as public/weapons/jet.png."
+    },
+    {
+      "id": "wiki-gg-icon-jiminy_12",
+      "label": "Endfield Talos Wiki Jiminy 12 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Jiminy_12_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 de5f8735c381da7884845b05d4040a9ac10c0da9. Saved as public/weapons/jiminy_12.png."
+    },
+    {
+      "id": "wiki-gg-icon-junction_point",
+      "label": "Endfield Talos Wiki Junction Point icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Junction_Point_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 ae66793481a4da6f349a74f206da51c8c05d492b. Saved as public/weapons/junction_point.png."
+    },
+    {
+      "id": "wiki-gg-icon-khravengger",
+      "label": "Endfield Talos Wiki Khravengger icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Khravengger_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 21bc4ba1a9d6648d052a18af46914af2efd59fe6. Saved as public/weapons/khravengger.png."
+    },
+    {
+      "id": "wiki-gg-icon-lone_barge",
+      "label": "Endfield Talos Wiki Lone Barge icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Lone_Barge_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f77ac7d323ad0ac91a0fb3194eb7c67b804f993a. Saved as public/weapons/lone_barge.png."
+    },
+    {
+      "id": "wiki-gg-icon-long_heritage",
+      "label": "Endfield Talos Wiki Long Heritage icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Long_Heritage_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 18ae577395cc4212da463d6590dedffb1ab0d912. Saved as public/weapons/long_heritage.png."
+    },
+    {
+      "id": "wiki-gg-icon-long_road",
+      "label": "Endfield Talos Wiki Long Road icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Long_Road_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 8fcb326d5ddda2835c003fe7abc0e8bc41b5f5c1. Saved as public/weapons/long_road.png."
+    },
+    {
+      "id": "wiki-gg-icon-lunar_calling",
+      "label": "Endfield Talos Wiki Lunar Calling icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Lunar_Calling_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 15f9c09c7543c6eb24f7b8f7a2363b480102ba11. Saved as public/weapons/lunar_calling.png."
+    },
+    {
+      "id": "wiki-gg-icon-lupine_scarlet",
+      "label": "Endfield Talos Wiki Lupine Scarlet icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Lupine_Scarlet_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 6044a1c18559e36706d440fbe481c4fe630b91af. Saved as public/weapons/lupine_scarlet.png."
+    },
+    {
+      "id": "wiki-gg-icon-monaihe",
+      "label": "Endfield Talos Wiki Monaihe icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Monaihe_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 8cebe1e28074648bf274667e1d2d75fea96f6e13. Saved as public/weapons/monaihe.png."
+    },
+    {
+      "id": "wiki-gg-icon-mountain_bearer",
+      "label": "Endfield Talos Wiki Mountain Bearer icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Mountain_Bearer_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 9fbcada6591211150b8bd491f13eacde7cf3b6ed. Saved as public/weapons/mountain_bearer.png."
+    },
+    {
+      "id": "wiki-gg-icon-navigator",
+      "label": "Endfield Talos Wiki Navigator icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Navigator_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f41b8a25987dc54e8e608c509232fe92f1b591f9. Saved as public/weapons/navigator.png."
+    },
+    {
+      "id": "wiki-gg-icon-never_rest",
+      "label": "Endfield Talos Wiki Never Rest icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Never_Rest_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 867c76cbe873f29a4f26cd39f089d47f2ecc6446. Saved as public/weapons/never_rest.png."
+    },
+    {
+      "id": "wiki-gg-icon-obj_arts_identifier",
+      "label": "Endfield Talos Wiki OBJ Arts Identifier icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:OBJ_Arts_Identifier_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 dde51cffc5aeb07bacf42a07798a88d85437375d. Saved as public/weapons/obj_arts_identifier.png."
+    },
+    {
+      "id": "wiki-gg-icon-obj_edge_of_lightness",
+      "label": "Endfield Talos Wiki OBJ Edge of Lightness icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:OBJ_Edge_of_Lightness_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 8ff914cdacfce088a9d07b1ea50001429856b633. Saved as public/weapons/obj_edge_of_lightness.png."
+    },
+    {
+      "id": "wiki-gg-icon-obj_heavy_burden",
+      "label": "Endfield Talos Wiki OBJ Heavy Burden icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:OBJ_Heavy_Burden_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f28453b4cf709e17eefbe32f6f1c32a4b31dd968. Saved as public/weapons/obj_heavy_burden.png."
+    },
+    {
+      "id": "wiki-gg-icon-obj_razorhorn",
+      "label": "Endfield Talos Wiki OBJ Razorhorn icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:OBJ_Razorhorn_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 fa04e9ab0ae285a4cc27f6a4e9a6f453ac44d0c3. Saved as public/weapons/obj_razorhorn.png."
+    },
+    {
+      "id": "wiki-gg-icon-obj_velocitous",
+      "label": "Endfield Talos Wiki OBJ Velocitous icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:OBJ_Velocitous_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 5593092b8b2384ad9db0a0617589df66c8768b8f. Saved as public/weapons/obj_velocitous.png."
+    },
+    {
+      "id": "wiki-gg-icon-oblivion",
+      "label": "Endfield Talos Wiki Oblivion icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Oblivion_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 359c908b00c80c96e796f8788a44e708d0edf9b4. Saved as public/weapons/oblivion.png."
+    },
+    {
+      "id": "wiki-gg-icon-opero_77",
+      "label": "Endfield Talos Wiki Opero 77 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Opero_77_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 8556bbf1fa8847593cec304ba0ea80605c0c9770. Saved as public/weapons/opero_77.png."
+    },
+    {
+      "id": "wiki-gg-icon-opus_etch_figure",
+      "label": "Endfield Talos Wiki Opus Etch Figure icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Opus_Etch_Figure_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 bfa5aeb33044cdac958fbf3ec2a5d6a3fd99558e. Saved as public/weapons/opus_etch_figure.png."
+    },
+    {
+      "id": "wiki-gg-icon-opus_the_living",
+      "label": "Endfield Talos Wiki Opus The Living icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Opus_The_Living_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 0ddbc1bacc965ec093985c6f044bbaa042dc7da8. Saved as public/weapons/opus_the_living.png."
+    },
+    {
+      "id": "wiki-gg-icon-pathfinders_beacon",
+      "label": "Endfield Talos Wiki Pathfinder's Beacon icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Pathfinder's_Beacon_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 1615c42f0eb814de27c5b71df63a0cd3942693a2. Saved as public/weapons/pathfinders_beacon.png."
+    },
+    {
+      "id": "wiki-gg-icon-peco_5",
+      "label": "Endfield Talos Wiki Peco 5 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Peco_5_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f3739eea10c576f0f57d77458fddc47add5283d2. Saved as public/weapons/peco_5.png."
+    },
+    {
+      "id": "wiki-gg-icon-phantom_pain",
+      "label": "Endfield Talos Wiki Phantom Pain icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Phantom_Pain_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 0cdb89d33cf1c518e3f271093a662f15d6603a2e. Saved as public/weapons/phantom_pain.png."
+    },
+    {
+      "id": "wiki-gg-icon-prominent_edge",
+      "label": "Endfield Talos Wiki Prominent Edge icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Prominent_Edge_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 c92bf695161f69399a0cf0a3446c469656b19a4f. Saved as public/weapons/prominent_edge.png."
+    },
+    {
+      "id": "wiki-gg-icon-quencher",
+      "label": "Endfield Talos Wiki Quencher icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Quencher_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 c0c61a725f6acaa580ee555de08812ad5769047f. Saved as public/weapons/quencher.png."
+    },
+    {
+      "id": "wiki-gg-icon-rapid_ascent",
+      "label": "Endfield Talos Wiki Rapid Ascent icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Rapid_Ascent_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 9c40b7f0d714217ea9997e471f3d3c6a2e6b6f01. Saved as public/weapons/rapid_ascent.png."
+    },
+    {
+      "id": "wiki-gg-icon-rational_farewell",
+      "label": "Endfield Talos Wiki Rational Farewell icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Rational_Farewell_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 89cedbde33760566636d937b146ac99720a85701. Saved as public/weapons/rational_farewell.png."
+    },
+    {
+      "id": "wiki-gg-icon-seeker_of_dark_lung",
+      "label": "Endfield Talos Wiki Seeker of Dark Lung icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Seeker_of_Dark_Lung_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 e6ff809359614ccdf53f6749c2ffde3eb399d7be. Saved as public/weapons/seeker_of_dark_lung.png."
+    },
+    {
+      "id": "wiki-gg-icon-stanza_of_memorials",
+      "label": "Endfield Talos Wiki Stanza of Memorials icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Stanza_of_Memorials_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 e54a96415702b3a5b86f99a17828ac48e507149b. Saved as public/weapons/stanza_of_memorials.png."
+    },
+    {
+      "id": "wiki-gg-icon-sufferings_end",
+      "label": "Endfield Talos Wiki Suffering's End icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Suffering's_End_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 3bcb40afc47c4922fe0f5cf8e759c571726b77ea. Saved as public/weapons/sufferings_end.png."
+    },
+    {
+      "id": "wiki-gg-icon-sundered_prince",
+      "label": "Endfield Talos Wiki Sundered Prince icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Sundered_Prince_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 a6f1f6555b6d443d4925af937706eaf2d29941ae. Saved as public/weapons/sundered_prince.png."
+    },
+    {
+      "id": "wiki-gg-icon-sundering_steel",
+      "label": "Endfield Talos Wiki Sundering Steel icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Sundering_Steel_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 e39fb82a42522d4155e6a409642c1d2593ad80b5. Saved as public/weapons/sundering_steel.png."
+    },
+    {
+      "id": "wiki-gg-icon-tarr_11",
+      "label": "Endfield Talos Wiki Tarr 11 icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Tarr_11_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 a870ed61c2d26879535643ce68e304b7b75139db. Saved as public/weapons/tarr_11.png."
+    },
+    {
+      "id": "wiki-gg-icon-thermite_cutter",
+      "label": "Endfield Talos Wiki Thermite Cutter icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Thermite_Cutter_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 1fd4ff89704aa12c2af816540216e49e87bbd481. Saved as public/weapons/thermite_cutter.png."
+    },
+    {
+      "id": "wiki-gg-icon-thunderberge",
+      "label": "Endfield Talos Wiki Thunderberge icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Thunderberge_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 a5bbd9baa572a83ac6c68bebc9c2f8edc2ad3db3. Saved as public/weapons/thunderberge.png."
+    },
+    {
+      "id": "wiki-gg-icon-twelve_questions",
+      "label": "Endfield Talos Wiki Twelve Questions icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Twelve_Questions_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 1ebdc822c3b0aef9f10e464101bc5ab316c6d636. Saved as public/weapons/twelve_questions.png."
+    },
+    {
+      "id": "wiki-gg-icon-type_42_solemn_phalanx",
+      "label": "Endfield Talos Wiki Type 42 Solemn Phalanx icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Type_42_Solemn_Phalanx_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 f65852bacf1ec4e356e354a95562b338cca15bd9. Saved as public/weapons/type_42_solemn_phalanx.png."
+    },
+    {
+      "id": "wiki-gg-icon-umbra_of_frigid_eventide",
+      "label": "Endfield Talos Wiki Umbra of Frigid Eventide icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Umbra_of_Frigid_Eventide_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 cdf8bc28693d7ccd5553b6b3447633b30351f448. Saved as public/weapons/umbra_of_frigid_eventide.png."
+    },
+    {
+      "id": "wiki-gg-icon-umbral_torch",
+      "label": "Endfield Talos Wiki Umbral Torch icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Umbral_Torch_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 8f6cbb3639f26b162ccb035a3fd6ed0bce34bc75. Saved as public/weapons/umbral_torch.png."
+    },
+    {
+      "id": "wiki-gg-icon-valiant",
+      "label": "Endfield Talos Wiki Valiant icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Valiant_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 74def835587bb323e2cc049263b4dd8a3d063732. Saved as public/weapons/valiant.png."
+    },
+    {
+      "id": "wiki-gg-icon-wave_tide",
+      "label": "Endfield Talos Wiki Wave Tide icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Wave_Tide_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 c364d934457ce4125c5a7ef6b2cdb2f660d23198. Saved as public/weapons/wave_tide.png."
+    },
+    {
+      "id": "wiki-gg-icon-wedge",
+      "label": "Endfield Talos Wiki Wedge icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Wedge_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 1f30689725c8267e4aee448351cb068e7d2d2096. Saved as public/weapons/wedge.png."
+    },
+    {
+      "id": "wiki-gg-icon-white_night_nova",
+      "label": "Endfield Talos Wiki White Night Nova icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:White_Night_Nova_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 c67e4d1ae669a961fcee8290e83a7367a682b586. Saved as public/weapons/white_night_nova.png."
+    },
+    {
+      "id": "wiki-gg-icon-wild_wanderer",
+      "label": "Endfield Talos Wiki Wild Wanderer icon.png (weapon icon)",
+      "url": "https://endfield.wiki.gg/wiki/File:Wild_Wanderer_icon.png",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "notes": "sha1 baf527caf5e4a7c4d9daa134f6e17e3ee7d784ed. Saved as public/weapons/wild_wanderer.png."
+    },
+    {
+      "id": "wiki-gg-industry_0_1",
+      "label": "Endfield Talos Wiki Industry 0.1 page",
+      "url": "https://endfield.wiki.gg/wiki/Industry_0.1",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61804
+    },
+    {
+      "id": "wiki-gg-jade_vessel",
+      "label": "Endfield Talos Wiki Jade Vessel page",
+      "url": "https://endfield.wiki.gg/wiki/Jade_Vessel",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 67090
+    },
+    {
+      "id": "wiki-gg-jet",
+      "label": "Endfield Talos Wiki JET page",
+      "url": "https://endfield.wiki.gg/wiki/JET",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61859
+    },
+    {
+      "id": "wiki-gg-jiminy_12",
+      "label": "Endfield Talos Wiki Jiminy 12 page",
+      "url": "https://endfield.wiki.gg/wiki/Jiminy_12",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65348
+    },
+    {
+      "id": "wiki-gg-junction_point",
+      "label": "Endfield Talos Wiki Junction Point page",
+      "url": "https://endfield.wiki.gg/wiki/Junction_Point",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61849
+    },
+    {
+      "id": "wiki-gg-khravengger",
+      "label": "Endfield Talos Wiki Khravengger page",
+      "url": "https://endfield.wiki.gg/wiki/Khravengger",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61820
+    },
+    {
+      "id": "wiki-gg-lone_barge",
+      "label": "Endfield Talos Wiki Lone Barge page",
+      "url": "https://endfield.wiki.gg/wiki/Lone_Barge",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61844
+    },
+    {
+      "id": "wiki-gg-long_heritage",
+      "label": "Endfield Talos Wiki Long Heritage page",
+      "url": "https://endfield.wiki.gg/wiki/Long_Heritage",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 64960
+    },
+    {
+      "id": "wiki-gg-long_road",
+      "label": "Endfield Talos Wiki Long Road page",
+      "url": "https://endfield.wiki.gg/wiki/Long_Road",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61867
+    },
+    {
+      "id": "wiki-gg-lunar_calling",
+      "label": "Endfield Talos Wiki Lunar Calling page",
+      "url": "https://endfield.wiki.gg/wiki/Lunar_Calling",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 67092
+    },
+    {
+      "id": "wiki-gg-lupine_scarlet",
+      "label": "Endfield Talos Wiki Lupine Scarlet page",
+      "url": "https://endfield.wiki.gg/wiki/Lupine_Scarlet",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61895
+    },
+    {
+      "id": "wiki-gg-monaihe",
+      "label": "Endfield Talos Wiki Monaihe page",
+      "url": "https://endfield.wiki.gg/wiki/Monaihe",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61836
+    },
+    {
+      "id": "wiki-gg-mountain_bearer",
+      "label": "Endfield Talos Wiki Mountain Bearer page",
+      "url": "https://endfield.wiki.gg/wiki/Mountain_Bearer",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61860
+    },
+    {
+      "id": "wiki-gg-navigator",
+      "label": "Endfield Talos Wiki Navigator page",
+      "url": "https://endfield.wiki.gg/wiki/Navigator",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61869
+    },
+    {
+      "id": "wiki-gg-never_rest",
+      "label": "Endfield Talos Wiki Never Rest page",
+      "url": "https://endfield.wiki.gg/wiki/Never_Rest",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61889
+    },
+    {
+      "id": "wiki-gg-obj_arts_identifier",
+      "label": "Endfield Talos Wiki OBJ Arts Identifier page",
+      "url": "https://endfield.wiki.gg/wiki/OBJ_Arts_Identifier",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61843
+    },
+    {
+      "id": "wiki-gg-obj_edge_of_lightness",
+      "label": "Endfield Talos Wiki OBJ Edge of Lightness page",
+      "url": "https://endfield.wiki.gg/wiki/OBJ_Edge_of_Lightness",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61892
+    },
+    {
+      "id": "wiki-gg-obj_heavy_burden",
+      "label": "Endfield Talos Wiki OBJ Heavy Burden page",
+      "url": "https://endfield.wiki.gg/wiki/OBJ_Heavy_Burden",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61823
+    },
+    {
+      "id": "wiki-gg-obj_razorhorn",
+      "label": "Endfield Talos Wiki OBJ Razorhorn page",
+      "url": "https://endfield.wiki.gg/wiki/OBJ_Razorhorn",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61861
+    },
+    {
+      "id": "wiki-gg-obj_velocitous",
+      "label": "Endfield Talos Wiki OBJ Velocitous page",
+      "url": "https://endfield.wiki.gg/wiki/OBJ_Velocitous",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61876
+    },
+    {
+      "id": "wiki-gg-oblivion",
+      "label": "Endfield Talos Wiki Oblivion page",
+      "url": "https://endfield.wiki.gg/wiki/Oblivion",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61838
+    },
+    {
+      "id": "wiki-gg-opero_77",
+      "label": "Endfield Talos Wiki Opero 77 page",
+      "url": "https://endfield.wiki.gg/wiki/Opero_77",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65350
+    },
+    {
+      "id": "wiki-gg-opus_etch_figure",
+      "label": "Endfield Talos Wiki Opus: Etch Figure page",
+      "url": "https://endfield.wiki.gg/wiki/Opus%3A_Etch_Figure",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61833
+    },
+    {
+      "id": "wiki-gg-opus_the_living",
+      "label": "Endfield Talos Wiki Opus: The Living page",
+      "url": "https://endfield.wiki.gg/wiki/Opus%3A_The_Living",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61870
+    },
+    {
+      "id": "wiki-gg-pathfinders_beacon",
+      "label": "Endfield Talos Wiki Pathfinder's Beacon page",
+      "url": "https://endfield.wiki.gg/wiki/Pathfinder's_Beacon",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61852
+    },
+    {
+      "id": "wiki-gg-peco_5",
+      "label": "Endfield Talos Wiki Peco 5 page",
+      "url": "https://endfield.wiki.gg/wiki/Peco_5",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65349
+    },
+    {
+      "id": "wiki-gg-phantom_pain",
+      "label": "Endfield Talos Wiki Phantom Pain page",
+      "url": "https://endfield.wiki.gg/wiki/Phantom_Pain",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61824
+    },
+    {
+      "id": "wiki-gg-prominent_edge",
+      "label": "Endfield Talos Wiki Prominent Edge page",
+      "url": "https://endfield.wiki.gg/wiki/Prominent_Edge",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61881
+    },
+    {
+      "id": "wiki-gg-quencher",
+      "label": "Endfield Talos Wiki Quencher page",
+      "url": "https://endfield.wiki.gg/wiki/Quencher",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61813
+    },
+    {
+      "id": "wiki-gg-rapid_ascent",
+      "label": "Endfield Talos Wiki Rapid Ascent page",
+      "url": "https://endfield.wiki.gg/wiki/Rapid_Ascent",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61884
+    },
+    {
+      "id": "wiki-gg-rational_farewell",
+      "label": "Endfield Talos Wiki Rational Farewell page",
+      "url": "https://endfield.wiki.gg/wiki/Rational_Farewell",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61868
+    },
+    {
+      "id": "wiki-gg-seeker_of_dark_lung",
+      "label": "Endfield Talos Wiki Seeker of Dark Lung page",
+      "url": "https://endfield.wiki.gg/wiki/Seeker_of_Dark_Lung",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61817
+    },
+    {
+      "id": "wiki-gg-stanza_of_memorials",
+      "label": "Endfield Talos Wiki Stanza of Memorials page",
+      "url": "https://endfield.wiki.gg/wiki/Stanza_of_Memorials",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61832
+    },
+    {
+      "id": "wiki-gg-sufferings_end",
+      "label": "Endfield Talos Wiki Suffering's End page",
+      "url": "https://endfield.wiki.gg/wiki/Suffering's_End",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61851
+    },
+    {
+      "id": "wiki-gg-sundered_prince",
+      "label": "Endfield Talos Wiki Sundered Prince page",
+      "url": "https://endfield.wiki.gg/wiki/Sundered_Prince",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61812
+    },
+    {
+      "id": "wiki-gg-sundering_steel",
+      "label": "Endfield Talos Wiki Sundering Steel page",
+      "url": "https://endfield.wiki.gg/wiki/Sundering_Steel",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61878
+    },
+    {
+      "id": "wiki-gg-tarr_11",
+      "label": "Endfield Talos Wiki Tarr 11 page",
+      "url": "https://endfield.wiki.gg/wiki/Tarr_11",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 65352
+    },
+    {
+      "id": "wiki-gg-thermite_cutter",
+      "label": "Endfield Talos Wiki Thermite Cutter page",
+      "url": "https://endfield.wiki.gg/wiki/Thermite_Cutter",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61885
+    },
+    {
+      "id": "wiki-gg-thunderberge",
+      "label": "Endfield Talos Wiki Thunderberge page",
+      "url": "https://endfield.wiki.gg/wiki/Thunderberge",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61811
+    },
+    {
+      "id": "wiki-gg-twelve_questions",
+      "label": "Endfield Talos Wiki Twelve Questions page",
+      "url": "https://endfield.wiki.gg/wiki/Twelve_Questions",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61891
+    },
+    {
+      "id": "wiki-gg-type_42_solemn_phalanx",
+      "label": "Endfield Talos Wiki Type 42: Solemn Phalanx page",
+      "url": "https://endfield.wiki.gg/wiki/Type_42%3A_Solemn_Phalanx",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61846
+    },
+    {
+      "id": "wiki-gg-umbra_of_frigid_eventide",
+      "label": "Endfield Talos Wiki Umbra of Frigid Eventide page",
+      "url": "https://endfield.wiki.gg/wiki/Umbra_of_Frigid_Eventide",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61850
+    },
+    {
+      "id": "wiki-gg-umbral_torch",
+      "label": "Endfield Talos Wiki Umbral Torch page",
+      "url": "https://endfield.wiki.gg/wiki/Umbral_Torch",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61883
+    },
+    {
+      "id": "wiki-gg-valiant",
+      "label": "Endfield Talos Wiki Valiant page",
+      "url": "https://endfield.wiki.gg/wiki/Valiant",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61858
+    },
+    {
+      "id": "wiki-gg-wave_tide",
+      "label": "Endfield Talos Wiki Wave Tide page",
+      "url": "https://endfield.wiki.gg/wiki/Wave_Tide",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61882
+    },
+    {
+      "id": "wiki-gg-wedge",
+      "label": "Endfield Talos Wiki Wedge page",
+      "url": "https://endfield.wiki.gg/wiki/Wedge",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61872
+    },
+    {
+      "id": "wiki-gg-white_night_nova",
+      "label": "Endfield Talos Wiki White Night Nova page",
+      "url": "https://endfield.wiki.gg/wiki/White_Night_Nova",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61887
+    },
+    {
+      "id": "wiki-gg-wild_wanderer",
+      "label": "Endfield Talos Wiki Wild Wanderer page",
+      "url": "https://endfield.wiki.gg/wiki/Wild_Wanderer",
+      "retrievedOn": "2026-11-22",
+      "confidence": "community",
+      "revisionId": 61831
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "slot1": ["agility", "strength", "will", "intellect", "main_attribute"],
+  "slot2": [
+    "atk",
+    "hp",
+    "physical_dmg",
+    "heat_dmg",
+    "electric_dmg",
+    "cryo_dmg",
+    "nature_dmg",
+    "critical_rate",
+    "arts_intensity",
+    "ult_efficiency",
+    "arts_dmg",
+    "treatment_efficiency"
+  ],
+  "slot3": [
+    "assault",
+    "suppression",
+    "pursuit",
+    "crusher",
+    "inspiring",
+    "combative",
+    "brutality",
+    "infliction",
+    "medicant",
+    "fracture",
+    "detonate",
+    "twilight",
+    "flow",
+    "efficacy"
+  ]
+}

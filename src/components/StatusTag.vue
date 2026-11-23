@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Tag from 'primevue/tag'
+import UiTag from '@/components/ui/UiTag.vue'
 import { STATUS_LABEL, type WeaponStatus } from '@/lib/status'
 
 defineProps<{ status: WeaponStatus }>()
@@ -8,5 +8,5 @@ const severity = { unobtained: 'secondary', obtained: 'info', completed: 'succes
 </script>
 
 <template>
-  <Tag :value="STATUS_LABEL[status]" :severity="severity[status]" />
+  <UiTag :value="STATUS_LABEL[status]" :severity="severity[status]" />
 </template>

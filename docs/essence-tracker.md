@@ -48,7 +48,7 @@ Stat ids (`src/data/stats.json`; display names in `src/locales/en.json`, spelled
 | `obtained` | `obtained === true`. Labelled "Obtained" (Obtained and Can be Improved are **one** status) |
 | `completed` | `obtained` and (all levels at max (6, 6, 3) **or** `completedOverride`). Automatic at max, with a manual override |
 
-Labels come from `STATUS_LABEL`. `StatusTag.vue` renders the status (Optimizer tiles; the Tracker table has no status column).
+Labels come from `STATUS_LABEL`. `StatusTag.vue` renders the status (Optimizer tiles and Tracker cards).
 
 Coupling rules, enforced in `tracker.update`: setting `completedOverride: true` also sets `obtained: true`; setting `obtained: false` also clears `completedOverride`.
 
@@ -61,8 +61,10 @@ Coupling rules, enforced in `tracker.update`: setting `completedOverride: true` 
 
 ## UI
 
-- PrimeVue `DataTable`: weapon icon (`WeaponIcon.vue`, from `public/weapons/`) and name, one "Essence" column with the three slots side by side as one colour-coded badge each (`StatLevel.vue`: stat name plus − / "level/max" / + bounded by the slot's max; Primary = blue, Secondary = cyan, Skill = purple, matching the column headers; green at max level; no free typing; disabled until obtained; 3-star slot 2 shows n/a), and one "Flags" column with two borderless icon toggles (`IconToggle.vue`, PrimeVue tooltip on hover, tinted when on): "Obtained" and "Mark completed" (also marks the weapon obtained). `onlySlot3` has no control in the Tracker table; it is edited only through the shield on Optimizer target cards. No Type or Rarity column and no user sorting: rows are always ordered by rarity (highest first), then name.
-- Sorting is fixed: rarity (highest first), then name. Headers are not sortable.
+- Essence level (`StatLevel.vue`), styled after the in-game "Essence Stats" panel: a name row (hollow bullet in the slot colour: Primary = blue, Secondary = teal, Skill = magenta; stat name; hairline rule), then a rounded track sized to its segments (one fixed-width slanted segment per level up to the slot's max, so at most 6; filled segments are Endfield yellow), with a divider and mono `+N` readout right-aligned at the row's end (`MAX` in green at max level). Click a segment to set that level; clicking the top filled segment steps down one (never below `LEVEL_MIN`). The track is a `role="slider"`: arrow keys step, Home/End jump to min/max. No free typing; disabled until obtained; 3-star slot 2 shows n/a.
+- Card grid (the only layout): one `TrackerCard.vue` per weapon (~19rem min so a ~15-character name word fits, auto-fill): rarity-coloured top bar, 56px icon (`WeaponIcon.vue`, from `public/weapons/`), name (up to 2 lines), rarity stars, `StatusTag`, two borderless icon toggles (`IconToggle.vue`, native `title` tooltip, tinted when on): "Obtained" and "Mark completed" (also marks the weapon obtained), then the three `StatLevel`s stacked (slot meaning in each one's tooltip). Completed cards get a green left accent; unobtained cards have a dimmed header. The card is presentational and emits `level` / `update`; the view writes to the store.
+- `onlySlot3` has no control in the Tracker; it is edited only through the shield on Optimizer target cards.
+- Sorting is fixed (no user sorting): rarity (highest first), then name.
 - Search by weapon name, filter by status, summary counts (unobtained / obtained / completed).
 - Export / Import progress as JSON, Reset (with confirm).
 

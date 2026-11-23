@@ -15,4 +15,3 @@ export const PRIORITY_MULTIPLIER = 2
 
 /** Engraving rules: choose 3 main stats, plus exactly one locked stat in slot 2 OR slot 3. */
 export const ENGRAVING_MAIN_PICKS = 3
-export const ENGRAVING_LOCKABLE_SLOTS = ['slot2', 'slot3'] as const

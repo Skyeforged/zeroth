@@ -4,14 +4,200 @@
   box-sizing: border-box;
 }
 
-/* Essence slot colours, shared by the Tracker badges/headers and the Optimizer target cards. */
+/*
+  Design tokens: Endfield-style industrial UI (see docs/README.md "Visual style").
+  Light theme by default (the white/yellow "operator roster" look); dark follows the OS setting and is the hero theme.
+*/
 :root {
-  --slot1-color: var(--p-blue-400);
-  --slot2-color: var(--p-cyan-400);
-  --slot3-color: var(--p-purple-400);
+  color-scheme: light dark;
+
+  /* Palette (Tailwind-style shades), used for semantic tones. */
+  --blue-400: #60a5fa;
+  --amber-500: #f59e0b;
+  --orange-500: #f97316;
+  --green-500: #22c55e;
+  --red-500: #ef4444;
+  --sky-500: #0ea5e9;
+
+  /* Endfield signature colours: hazard yellow and the yellow/cyan/magenta tri-stripe. */
+  --endfield-yellow: #ffe600;
+  --stripe-y: var(--endfield-yellow);
+  --stripe-c: #20d9cb;
+  --stripe-m: #ff3dc8;
+
+  /* Surfaces and text (light). */
+  --bg: #eeeeea;
+  --surface: #ffffff;
+  --surface-2: #f6f6f2;
+  --surface-hover: #e7e7e2;
+  --border: #d4d4cd;
+  --border-strong: #b3b3ab;
+  --text: #141518;
+  --text-muted: #5c6068;
+  --grid-line: rgb(0 0 0 / 0.045);
+  --hatch: rgb(0 0 0 / 0.07);
+  --watermark: rgb(0 0 0 / 0.07);
+
+  /* Accent. Yellow is for fills, bars and borders; yellow *text* uses --primary-text (darker in light mode for contrast). */
+  --primary: var(--endfield-yellow);
+  --primary-contrast: #0d0e10;
+  --primary-text: #8a7200;
+  --focus-ring: #141518;
+
+  /* Shape: square edges everywhere; --cut is the chamfered corner on solid buttons. */
+  --radius: 0;
+  --cut: 7px;
+
+  /* Type. */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  /* Essence slot colours, shared by the Tracker badges/headers and the Optimizer target cards. */
+  --slot1-color: #0a6fc2;
+  --slot2-color: #08907c;
+  --slot3-color: #b02ad1;
 }
 
-/* Global density: everything sized in rem (including PrimeVue) scales with this. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0d0f;
+    --surface: #15171a;
+    --surface-2: #1b1d21;
+    --surface-hover: #23262b;
+    --border: #2a2d33;
+    --border-strong: #41454d;
+    --text: #e8e8e4;
+    --text-muted: #8b909a;
+    --grid-line: rgb(255 255 255 / 0.025);
+    --hatch: rgb(255 255 255 / 0.05);
+    --watermark: rgb(255 255 255 / 0.05);
+
+    --primary-text: var(--endfield-yellow);
+    --focus-ring: var(--endfield-yellow);
+
+    --slot1-color: #4cb4ff;
+    --slot2-color: #2ee6c4;
+    --slot3-color: #e070ff;
+  }
+}
+
+/*
+  Severity tones for UiButton, UiTag and UiMessage:
+  --tone is the accent (borders/text), --tone-fill the solid fill (defaults to --tone), --on-tone is text on the fill.
+*/
+.tone-primary {
+  --tone: var(--primary-text);
+  --tone-fill: var(--primary);
+  --on-tone: var(--primary-contrast);
+}
+
+/* Reset the fill so a tone nested inside a primary-toned parent does not inherit yellow. */
+.tone-secondary,
+.tone-info,
+.tone-success,
+.tone-warn,
+.tone-danger {
+  --tone-fill: var(--tone);
+}
+
+.tone-secondary {
+  --tone: var(--text-muted);
+  --on-tone: var(--text);
+}
+
+.tone-info {
+  --tone: var(--sky-500);
+  --on-tone: #ffffff;
+}
+
+.tone-success {
+  --tone: var(--green-500);
+  --on-tone: #ffffff;
+}
+
+.tone-warn {
+  --tone: var(--orange-500);
+  --on-tone: #ffffff;
+}
+
+.tone-danger {
+  --tone: var(--red-500);
+  --on-tone: #ffffff;
+}
+
+/* ---------- Decoration utilities ---------- */
+
+/* Yellow / cyan / magenta segmented bar. Brand accent only (logo, page plate): keep it off repeated items like cards and tiles. */
+.tri-stripe {
+  display: block;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--stripe-y) 0 30%,
+    transparent 30% 34%,
+    var(--stripe-c) 34% 64%,
+    transparent 64% 68%,
+    var(--stripe-m) 68% 100%
+  );
+}
+
+/* Faint diagonal hazard hatching. */
+.hatch-bg {
+  background-image: repeating-linear-gradient(-45deg, var(--hatch) 0 1px, transparent 1px 7px);
+}
+
+/* Condensed uppercase label/heading type. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Monospace numeric readout. */
+.readout {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Form controls ---------- */
+
+/* Shared text field look for UiInput and UiSelect. */
+.ui-control {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.2;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.ui-control::placeholder {
+  color: var(--text-muted);
+}
+
+.ui-control:hover {
+  border-color: var(--text-muted);
+}
+
+.ui-control:focus {
+  outline: none;
+  border-color: var(--focus-ring);
+  box-shadow: inset 0 -2px 0 var(--primary);
+}
+
+/* ---------- Base ---------- */
+
+/* Global density: everything sized in rem scales with this. */
 html {
   font-size: 14px;
 }
@@ -37,10 +223,23 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  background: var(--p-content-background);
-  color: var(--p-text-color);
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  /* Blueprint grid. */
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+  color: var(--text);
 }
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
+/* ---------- App shell ---------- */
 
 .app-shell {
   display: flex;
@@ -51,36 +250,51 @@ body {
   position: sticky;
   top: 0;
   align-self: flex-start;
-  flex: 0 0 12rem;
+  flex: 0 0 13rem;
   height: 100vh;
   overflow-y: auto;
-  padding: 1rem 0.75rem;
-  border-right: 1px solid var(--p-content-border-color);
+  padding: 1.1rem 0.75rem;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
 }
 
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
-  padding: 0 0.5rem 0.9rem;
-  margin-bottom: 0.9rem;
-  border-bottom: 1px solid var(--p-content-border-color);
-}
-
-.brand-sub {
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--p-primary-color);
+  gap: 0.45rem;
+  padding: 0 0.5rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .brand h1 {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  font-size: 1.15rem;
+  font-family: var(--font-display);
   font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.85;
+}
+
+.brand-mark {
+  font-size: 1.9rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-sub {
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   line-height: 1.2;
-  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.brand-sub::before {
+  content: '// ';
+  color: var(--primary-text);
+  font-weight: 700;
 }
 
 .app-nav {
@@ -92,58 +306,151 @@ body {
 .nav-group {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.2rem;
 }
 
 .nav-group-label {
-  padding: 0 0.5rem 0.25rem;
+  padding: 0 0.5rem 0.3rem;
+  font-family: var(--font-mono);
   font-size: 0.65rem;
-  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--p-text-muted-color);
-  opacity: 0.7;
+  color: var(--text-muted);
+}
+
+.nav-group-label::before {
+  content: '// ';
+  color: var(--primary-text);
 }
 
 .app-nav a {
-  display: block;
-  padding: 0.4rem 0.6rem;
-  border-left: 2px solid transparent;
-  border-radius: 0 6px 6px 0;
-  color: var(--p-text-muted-color);
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.45rem 0.6rem;
+  border-left: 3px solid transparent;
+  color: var(--text-muted);
   text-decoration: none;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   transition:
     background 0.15s,
-    color 0.15s;
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.nav-index {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  opacity: 0.7;
 }
 
 .app-nav a:hover {
-  color: var(--p-text-color);
-  background: color-mix(in srgb, var(--p-text-color) 6%, transparent);
+  color: var(--text);
+  border-left-color: var(--border-strong);
+  background: var(--surface-hover);
 }
 
 .app-nav a.router-link-active {
-  color: var(--p-primary-color);
-  border-left-color: var(--p-primary-color);
-  background: color-mix(in srgb, var(--p-primary-color) 10%, transparent);
+  color: var(--text);
+  border-left-color: var(--primary);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--primary) 18%, transparent), transparent);
+}
+
+.app-nav a.router-link-active .nav-index {
+  color: var(--primary-text);
+  opacity: 1;
+}
+
+.app-nav a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
 }
 
 .app-main {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
   flex: 1;
   min-width: 0;
-  padding: 0.75rem 1rem 2rem;
+  padding: 1rem 1.25rem 2rem;
+}
+
+/* Giant outlined backdrop wordmark, as on the Endfield site. */
+.app-main::before {
+  content: 'ENDFIELD';
+  position: absolute;
+  z-index: -1;
+  top: -0.15em;
+  left: 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 18vw, 22rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--watermark);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Page header: "// TITLE" on the left, a tagged plate on the right. */
+.page-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.page-title::before {
+  content: '// ';
+  color: var(--primary-text);
+}
+
+.page-plate {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* Data error/warning banners sit above the page: keep them apart from the content below. */
-.app-main > .p-message {
+.app-main > .ui-message {
   margin-bottom: 1.25rem;
 }
 
 /* Mid-width screens: slimmer sidebar to give content more room. */
 @media (max-width: 1024px) {
   .app-sidebar {
-    flex-basis: 10rem;
+    flex-basis: 11rem;
   }
 
   .app-main {
@@ -163,12 +470,31 @@ body {
     width: 100%;
     height: auto;
     border-right: none;
-    border-bottom: 1px solid var(--p-content-border-color);
+    border-bottom: 1px solid var(--border);
   }
 
   .brand {
     padding-bottom: 0.6rem;
     margin-bottom: 0.6rem;
+  }
+
+  .brand h1 {
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.6rem;
+  }
+
+  .brand-mark {
+    font-size: 1.5rem;
+  }
+
+  .brand-mark br {
+    display: none;
+  }
+
+  .brand-sub {
+    margin-top: 0;
   }
 
   .app-nav {
@@ -187,16 +513,39 @@ body {
   .app-nav a {
     padding-left: 0.5rem;
   }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .page-plate {
+    display: none;
+  }
 }
 
+/* ---------- Shared page pieces ---------- */
+
+/* Filter/action bar: a dark slab like the in-game "Class / Element" filters. */
 .toolbar {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
   margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
 }
 
 .muted {
-  color: var(--p-text-muted-color);
+  color: var(--text-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

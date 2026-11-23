@@ -9,7 +9,7 @@ Game rules in these docs were **confirmed by the user**. Do not guess or change 
 
 ## Stack and hosting
 
-- Vue 3 + Vite + TypeScript, Pinia, Vue Router, PrimeVue (Aura theme).
+- Vue 3 + Vite + TypeScript, Pinia, Vue Router. No UI component library: our own components live in `src/components/ui/` (see "UI components" below). Icons are inline SVGs (`UiIcon`, set in `src/components/ui/icons.ts`); no icon font or icon package.
 - Static SPA, **no SSR**. Router uses **hash history** (`createWebHashHistory`) because GitHub Pages cannot rewrite URLs.
 - GitHub Pages project site. `vite.config.ts` sets `base` from `VITE_BASE` (default `/zeroth/`). `.github/workflows/deploy.yml` builds on push to `main` with `VITE_BASE=/<repo-name>/`. The local branch is currently `master`.
 - State is stored in `localStorage` only. There is no backend.
@@ -54,12 +54,34 @@ src/data/{sources,gaps,manifest}.json   generated source trail for weapons
 src/stores/tracker.ts      tracker progress (Pinia, persisted)
 src/stores/optimizer.ts    optimizer selection, priority, custom essences (Pinia, persisted)
 src/views/                 TrackerView.vue, OptimizerView.vue
-src/components/            StatusTag, StatChip, TargetCard, CustomEssenceForm, AlluviumResultCard, PreEngraveStrip, WeaponIcon, IconToggle, WeaponTile
+src/components/            TrackerCard, StatLevel, StatusTag, StatChip, TargetCard, CustomEssenceForm, AlluviumResultCard, PreEngraveStrip, WeaponIcon, IconToggle, WeaponTile
+src/components/ui/         generic UI kit: UiButton, UiInput, UiSelect, UiTag, UiMessage, UiCard, UiCheckbox, UiIcon (+ icons.ts, types.ts)
+src/assets/main.css        design tokens (light + dark via prefers-color-scheme), .tone-* severity classes, .ui-control field style
 src/lib/rarity.ts          rarityColor: cosmetic colour per weapon rarity (3 to 6 stars), used by WeaponIcon and WeaponTile
 src/lib/weaponTypes.ts     weaponTypeOptions: distinct weapon types in display order (names in locale `weaponTypes`)
 src/lib/weaponIcon.ts      icon URL from Vite BASE_URL (`public/weapons/<id>.png`); WeaponIcon renders nothing when a weapon has no icon
-src/lib/__tests__/         Vitest specs (status, optimizer, validate)
+src/lib/__tests__/         Vitest specs (status, optimizer, validate, rarity, weaponIcon, weaponTypes)
 ```
+
+## UI components
+
+- Hand-written, no component library. Build new UI from `src/components/ui/` and extend those before adding one-off styles.
+- Theme: CSS custom properties in `src/assets/main.css` (`--bg`, `--surface`, `--surface-2`, `--surface-hover`, `--border`, `--border-strong`, `--text`, `--text-muted`, `--primary`, `--primary-contrast`, `--primary-text`, `--focus-ring`, `--radius`, `--cut`, font stacks `--font-display` / `--font-body` / `--font-mono`, tri-stripe colours `--stripe-y/c/m`, palette shades such as `--blue-400`, and the slot colours `--slot1-color`..`--slot3-color`). Dark values follow `prefers-color-scheme`.
+- `Severity` (`primary | secondary | info | success | warn | danger`) maps to global `.tone-*` classes that set `--tone` / `--tone-fill` / `--on-tone`; UiButton, UiTag and UiMessage use them.
+
+### Visual style (Endfield industrial)
+
+- Look: square edges (`--radius: 0`), hazard yellow `--primary` (#ffe600) on near-black (dark) or off-white paper (light), blueprint grid on the body, a giant outlined "ENDFIELD" watermark behind the main area, and `//` prefixes on headings and labels.
+- Yellow is for fills, bars and borders only. Yellow **text** must use `--primary-text` (darker amber in light mode for contrast). Focus rings use `--focus-ring`.
+- Fonts are self-hosted via `@fontsource` (imported in `src/main.ts`): Barlow Condensed for headings, nav, buttons and table headers (uppercase, letter-spaced); Barlow for body text; JetBrains Mono for numbers, levels and readouts.
+- Global utility classes: `.tri-stripe` (yellow/cyan/magenta bar; only on one-off brand spots, the sidebar logo and the page-header plate, never on repeated cards or tiles), `.hatch-bg` (diagonal hatching), `.display` (condensed uppercase), `.readout` (mono counter text).
+- Solid UiButtons have a chamfered bottom-right corner (`clip-path`, size `--cut`), so their focus ring is drawn inside. UiCard has yellow/grey corner brackets. `.toolbar` is a slab with a yellow left bar.
+- The page header (`// Title` plus a tri-stripe plate) is rendered by `App.vue` from the nav entry matching the current route.
+- Icons: `<UiIcon name="plus" />`, sized `1em` so it follows the font-size, always `aria-hidden` (label the parent control). To add one, put its 24x24 stroke markup in `ICONS` in `icons.ts`; `IconName` is derived from the keys, so `icon` props are type-checked.
+- UiButton: `label`, `icon` (an `IconName`), `severity`, `variant` (`solid | outlined | text`), `size` (`normal | small`), `disabled`; `aria-*` and `@click` fall through. Toggle buttons are a UiButton with `aria-pressed`.
+- UiSelect is a styled native `<select>` (`options: { value, label }[]`, `placeholder`, `clearable` to allow picking the placeholder to reset to null). No search filter; native type-ahead instead.
+- Tooltips are native `title` attributes.
+- The Tracker is a card grid in `TrackerView.vue` (one `TrackerCard.vue` per weapon).
 
 ## Keeping these docs current
 

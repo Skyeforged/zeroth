@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import StatChip from '@/components/StatChip.vue'
+import UiIcon from '@/components/ui/UiIcon.vue'
 import { ENGRAVING_MAIN_PICKS } from '@/lib/constants'
 import { nameOf } from '@/lib/i18n'
 import type { Engraving, Lock } from '@/lib/optimizer'
@@ -18,7 +19,7 @@ const locks = computed(() => [props.engraving.lock, ...props.altLocks])
 
 <template>
   <div class="strip">
-    <strong><i class="pi pi-lock" /> Recommended Pre-Engrave</strong>
+    <strong><UiIcon name="lock" /> Recommended Pre-Engrave</strong>
     <div class="row">
       <StatChip v-for="(m, i) in mainSlots" :key="i" :label="m.label" tone="slot1" :class="{ any: m.any }" />
       <span>+</span>
@@ -32,9 +33,19 @@ const locks = computed(() => [props.engraving.lock, ...props.altLocks])
 
 <style scoped>
 .strip {
-  border-top: 1px solid var(--p-content-border-color);
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
+  margin-top: 0.85rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px dashed var(--border-strong);
+  border-left: 3px solid var(--primary);
+  background: var(--surface-2);
+}
+
+.strip > strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .any {

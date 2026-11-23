@@ -1,21 +1,16 @@
 <script setup lang="ts">
-import Button from 'primevue/button'
-import Column from 'primevue/column'
-import DataTable from 'primevue/datatable'
-import InputText from 'primevue/inputtext'
-import Message from 'primevue/message'
-import Select from 'primevue/select'
 import { computed, ref } from 'vue'
-import IconToggle from '@/components/IconToggle.vue'
-import StatLevel from '@/components/StatLevel.vue'
-import WeaponIcon from '@/components/WeaponIcon.vue'
+import TrackerCard from '@/components/TrackerCard.vue'
+import UiButton from '@/components/ui/UiButton.vue'
+import UiInput from '@/components/ui/UiInput.vue'
+import UiMessage from '@/components/ui/UiMessage.vue'
+import UiSelect from '@/components/ui/UiSelect.vue'
 import { weapons } from '@/data'
-import { LEVEL_MAX, LEVEL_MIN } from '@/lib/constants'
 import { essenceSlots } from '@/lib/essence'
 import { nameOf } from '@/lib/i18n'
 import { deriveStatus, STATUS_LABEL, type WeaponStatus } from '@/lib/status'
 import { useTrackerStore } from '@/stores/tracker'
-import { SLOTS, type Slot } from '@/types/data'
+import type { Slot } from '@/types/data'
 
 const tracker = useTrackerStore()
 
@@ -85,135 +80,65 @@ function confirmReset() {
 
 <template>
   <div class="toolbar">
-    <InputText v-model="search" placeholder="Search weapon" />
-    <Select
+    <UiInput v-model="search" placeholder="Search weapon" aria-label="Search weapon" />
+    <UiSelect
       v-model="statusFilter"
       :options="statusOptions"
-      option-label="label"
-      option-value="value"
       placeholder="All statuses"
-      show-clear
+      aria-label="Filter by status"
+      clearable
     />
-    <span class="muted">
-      {{ summary.unobtained }} unobtained · {{ summary.obtained }} obtained · {{ summary.completed }} completed
+    <span class="readout">
+      // {{ summary.unobtained }} unobtained · {{ summary.obtained }} obtained · {{ summary.completed }} completed
     </span>
-    <span style="flex: 1" />
-    <Button label="Export" icon="pi pi-download" severity="secondary" @click="download" />
-    <Button label="Import" icon="pi pi-upload" severity="secondary" @click="fileInput?.click()" />
-    <Button label="Reset" icon="pi pi-trash" severity="danger" text @click="confirmReset" />
+    <span class="spacer" />
+    <UiButton label="Export" icon="download" severity="secondary" @click="download" />
+    <UiButton label="Import" icon="upload" severity="secondary" @click="fileInput?.click()" />
+    <UiButton label="Reset" icon="trash" severity="danger" variant="text" @click="confirmReset" />
     <input ref="fileInput" type="file" accept="application/json,.json" hidden @change="onImport" />
   </div>
-  <Message v-if="importError" severity="error">{{ importError }}</Message>
+  <UiMessage v-if="importError" severity="danger" icon="times-circle" class="import-error">
+    {{ importError }}
+  </UiMessage>
 
-  <DataTable :value="rows" data-key="weapon.id" size="small" striped-rows class="tracker-table">
-    <Column header="Weapon" style="width: 16rem">
-      <template #body="{ data }">
-        <div class="weapon-cell">
-          <WeaponIcon :weapon-id="data.weapon.id" :size="28" />
-          <span>{{ data.name }}</span>
-        </div>
-      </template>
-    </Column>
-    <Column>
-      <template #header>
-        <div class="essence-grid">
-          <span v-for="slot in SLOTS" :key="slot" class="slot-head" :class="slot">{{ slotLabel[slot] }}</span>
-        </div>
-      </template>
-      <template #body="{ data }">
-        <div class="essence-grid">
-          <template v-for="slot in SLOTS" :key="slot">
-            <!-- 3-star weapons have no slot-2 sub stat -->
-            <span v-if="data.weapon.essence[slot] === undefined" class="muted">n/a</span>
-            <StatLevel
-              v-else
-              :name="nameOf('stats', data.weapon.essence[slot])"
-              :tone="slot"
-              :model-value="data.progress.levels[slot]"
-              :min="LEVEL_MIN"
-              :max="LEVEL_MAX[slot]"
-              :disabled="!data.progress.obtained"
-              @update:model-value="(v: number) => tracker.setLevel(data.weapon.id, slot, v)"
-            />
-          </template>
-        </div>
-      </template>
-    </Column>
-    <Column header="Flags" style="width: 6rem">
-      <template #body="{ data }">
-        <div class="flags">
-          <IconToggle
-            icon="pi pi-box"
-            label="Obtained"
-            tone="info"
-            :model-value="data.progress.obtained"
-            @update:model-value="(v: boolean) => tracker.update(data.weapon.id, { obtained: v })"
-          />
-          <IconToggle
-            icon="pi pi-check-circle"
-            label="Mark completed"
-            tone="success"
-            :model-value="data.progress.completedOverride"
-            @update:model-value="(v: boolean) => tracker.update(data.weapon.id, { completedOverride: v })"
-          />
-        </div>
-      </template>
-    </Column>
-    <template #empty>No weapons match the current filters.</template>
-  </DataTable>
+  <div class="card-grid">
+    <TrackerCard
+      v-for="r in rows"
+      :key="r.weapon.id"
+      :weapon-id="r.weapon.id"
+      :name="r.name"
+      :rarity="r.weapon.rarity"
+      :essence="r.weapon.essence"
+      :progress="r.progress"
+      :status="r.status"
+      :slot-labels="slotLabel"
+      @level="(slot, v) => tracker.setLevel(r.weapon.id, slot, v)"
+      @update="(patch) => tracker.update(r.weapon.id, patch)"
+    />
+    <p v-if="!rows.length" class="empty">No weapons match the current filters.</p>
+  </div>
 </template>
 
 <style scoped>
-.weapon-cell {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.essence-grid {
+.card-grid {
   display: grid;
-  /* Header and row grids share the same column width, so equal tracks keep them aligned.
-     Tracks shrink on narrow screens; the table scrolls horizontally below their minimum. */
-  grid-template-columns: repeat(3, minmax(10rem, 1fr));
-  gap: 0.75rem;
-  align-items: center;
+  /* ~19rem leaves room for a 15-character word in the card name before it has to break. */
+  grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr));
+  gap: 0.6rem;
 }
 
-.slot-head {
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 0.8rem;
-  font-weight: 700;
+.spacer {
+  flex: 1;
 }
 
-.slot-head.slot1 {
-  color: var(--slot1-color);
+.empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  color: var(--text-muted);
 }
 
-.slot-head.slot2 {
-  color: var(--slot2-color);
-}
-
-.slot-head.slot3 {
-  color: var(--slot3-color);
-}
-
-.flags {
-  display: flex;
-  gap: 0.125rem;
-}
-
-/* PrimeVue's flex header wrapper would otherwise shrink the header grid. */
-.tracker-table :deep(.p-datatable-column-header-content) {
-  display: block;
-}
-
-.tracker-table :deep(.p-datatable-table-container) {
-  overflow-x: auto;
-}
-
-.tracker-table :deep(.p-datatable-thead > tr > th),
-.tracker-table :deep(.p-datatable-tbody > tr > td) {
-  padding: 0.25rem 0.5rem;
+.import-error {
+  margin-bottom: 0.75rem;
 }
 </style>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import UiIcon from '@/components/ui/UiIcon.vue'
 import type { Slot } from '@/types/data'
 
 /** `tone` colours the chip by essence slot; `state` (Energy Alluvium cards) takes precedence over it. */
@@ -7,8 +8,8 @@ defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot }
 
 <template>
   <span class="chip" :class="[state ?? 'neutral', state ? undefined : tone]">
-    <i v-if="state === 'ok'" class="pi pi-check" />
-    <i v-else-if="state === 'missing'" class="pi pi-times" />
+    <UiIcon v-if="state === 'ok'" name="check" class="mark" />
+    <UiIcon v-else-if="state === 'missing'" name="times" class="mark" />
     {{ label }}
   </span>
 </template>
@@ -19,24 +20,24 @@ defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot }
   align-items: center;
   gap: 0.3rem;
   padding: 0.1rem 0.5rem;
-  border-radius: 4px;
+  border-radius: var(--radius);
   font-size: 0.8rem;
-  border: 1px solid var(--p-content-border-color);
-  background: color-mix(in srgb, var(--p-text-muted-color) 12%, transparent);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--text-muted) 12%, transparent);
 }
 
-.chip i {
+.mark {
   font-size: 0.7rem;
 }
 
 .ok {
-  color: var(--p-green-500);
-  border-color: var(--p-green-500);
-  background: color-mix(in srgb, var(--p-green-500) 16%, transparent);
+  color: var(--green-500);
+  border-color: var(--green-500);
+  background: color-mix(in srgb, var(--green-500) 16%, transparent);
 }
 
 .missing {
-  color: var(--p-text-muted-color);
+  color: var(--text-muted);
 }
 
 .slot1,
@@ -45,8 +46,9 @@ defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot }
   --tone: var(--slot1-color);
   color: var(--tone);
   font-weight: 600;
-  border-color: color-mix(in srgb, var(--tone) 45%, transparent);
-  background: color-mix(in srgb, var(--tone) 14%, transparent);
+  border-color: color-mix(in srgb, var(--tone) 40%, transparent);
+  border-left: 2px solid var(--tone);
+  background: color-mix(in srgb, var(--tone) 12%, transparent);
 }
 
 .slot2 {

@@ -1,27 +1,24 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import type { IconName } from '@/components/ui/icons'
+import UiIcon from '@/components/ui/UiIcon.vue'
 
-const props = withDefaults(
+withDefaults(
   defineProps<{
     modelValue: boolean
-    icon: string
+    icon: IconName
     label: string
-    /** Tooltip shown instead of `label` while disabled. */
-    disabledHint?: string
     tone?: 'success' | 'warn' | 'info'
     disabled?: boolean
   }>(),
-  { tone: 'success', disabled: false, disabledHint: undefined },
+  { tone: 'success', disabled: false },
 )
 
 defineEmits<{ 'update:modelValue': [value: boolean] }>()
-
-const tip = computed(() => (props.disabled && props.disabledHint ? props.disabledHint : props.label))
 </script>
 
 <template>
-  <!-- Tooltip sits on the wrapper: disabled buttons don't emit hover events. -->
-  <span v-tooltip.top="tip" class="icon-toggle-wrap">
+  <!-- Native tooltip sits on the wrapper: disabled buttons don't emit hover events. -->
+  <span :title="label" class="icon-toggle-wrap">
     <button
       type="button"
       class="icon-toggle"
@@ -31,7 +28,7 @@ const tip = computed(() => (props.disabled && props.disabledHint ? props.disable
       :disabled="disabled"
       @click="$emit('update:modelValue', !modelValue)"
     >
-      <i :class="icon" />
+      <UiIcon :name="icon" />
     </button>
   </span>
 </template>
@@ -42,16 +39,16 @@ const tip = computed(() => (props.disabled && props.disabledHint ? props.disable
 }
 
 .icon-toggle {
-  --tone: var(--p-green-500);
+  --tone: var(--green-500);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 1.6rem;
   height: 1.6rem;
-  border: none;
-  border-radius: 6px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
   background: transparent;
-  color: var(--p-text-muted-color);
+  color: var(--text-muted);
   cursor: pointer;
   transition:
     background 0.15s,
@@ -59,11 +56,11 @@ const tip = computed(() => (props.disabled && props.disabledHint ? props.disable
 }
 
 .icon-toggle.tone-warn {
-  --tone: var(--p-amber-500);
+  --tone: var(--amber-500);
 }
 
 .icon-toggle.tone-info {
-  --tone: var(--p-blue-400);
+  --tone: var(--blue-400);
 }
 
 .icon-toggle:hover:not(:disabled) {
@@ -73,7 +70,8 @@ const tip = computed(() => (props.disabled && props.disabledHint ? props.disable
 
 .icon-toggle.on {
   color: var(--tone);
-  background: color-mix(in srgb, var(--tone) 22%, transparent);
+  border-color: color-mix(in srgb, var(--tone) 50%, transparent);
+  background: color-mix(in srgb, var(--tone) 20%, transparent);
 }
 
 .icon-toggle:disabled {

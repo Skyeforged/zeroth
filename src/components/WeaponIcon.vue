@@ -30,8 +30,8 @@ const color = computed(() => rarityColor(weapons.find((w) => w.id === props.weap
 .frame {
   flex: none;
   display: inline-flex;
-  border: 2px solid var(--p-content-border-color);
-  border-radius: 6px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 

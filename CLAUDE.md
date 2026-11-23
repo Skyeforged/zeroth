@@ -1,6 +1,6 @@
 # Endfield Essence Tools
 
-Frontend-only Vue 3 + Vite + TypeScript app (Pinia, Vue Router, PrimeVue) for Arknights: Endfield. Two features: an Essence Tracker and an Essence Farming Optimizer. Hosted as a static site on GitHub Pages.
+Frontend-only Vue 3 + Vite + TypeScript app (Pinia, Vue Router, hand-written UI components in `src/components/ui/`, no component library) for Arknights: Endfield. Two features: an Essence Tracker and an Essence Farming Optimizer. Hosted as a static site on GitHub Pages.
 
 **Read before changing anything:**
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Button from 'primevue/button'
-import InputText from 'primevue/inputtext'
-import Select from 'primevue/select'
 import { computed, ref } from 'vue'
+import UiButton from '@/components/ui/UiButton.vue'
+import UiInput from '@/components/ui/UiInput.vue'
+import UiSelect from '@/components/ui/UiSelect.vue'
 import { stats } from '@/data'
 import { nameOf } from '@/lib/i18n'
 import type { FullEssence, Id } from '@/types/data'
@@ -14,7 +14,7 @@ const slot1 = ref<Id | null>(null)
 const slot2 = ref<Id | null>(null)
 const slot3 = ref<Id | null>(null)
 
-const options = (ids: Id[]) => ids.map((id) => ({ id, label: nameOf('stats', id) }))
+const options = (ids: Id[]) => ids.map((id) => ({ value: id, label: nameOf('stats', id) }))
 const slot1Options = computed(() => options(stats.slot1))
 const slot2Options = computed(() => options(stats.slot2))
 const slot3Options = computed(() => options(stats.slot3))
@@ -31,11 +31,11 @@ function add() {
 
 <template>
   <div class="form">
-    <InputText v-model="name" placeholder="Name (optional)" />
-    <Select v-model="slot1" :options="slot1Options" option-label="label" option-value="id" placeholder="Slot 1 (main stat)" filter />
-    <Select v-model="slot2" :options="slot2Options" option-label="label" option-value="id" placeholder="Slot 2 (sub stat)" filter />
-    <Select v-model="slot3" :options="slot3Options" option-label="label" option-value="id" placeholder="Slot 3 (skill)" filter />
-    <Button label="Add custom essence" icon="pi pi-plus" :disabled="!complete" @click="add" />
+    <UiInput v-model="name" placeholder="Name (optional)" aria-label="Name" />
+    <UiSelect v-model="slot1" :options="slot1Options" placeholder="Slot 1 (main stat)" aria-label="Slot 1 (main stat)" />
+    <UiSelect v-model="slot2" :options="slot2Options" placeholder="Slot 2 (sub stat)" aria-label="Slot 2 (sub stat)" />
+    <UiSelect v-model="slot3" :options="slot3Options" placeholder="Slot 3 (skill)" aria-label="Slot 3 (skill)" />
+    <UiButton label="Add custom essence" icon="plus" :disabled="!complete" @click="add" />
   </div>
 </template>
 

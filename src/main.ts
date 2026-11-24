@@ -14,6 +14,15 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import { initAnalytics, trackPageView } from './lib/analytics'
+
+// Production builds only, and only when a measurement id was provided at build time.
+if (import.meta.env.PROD) {
+  initAnalytics(import.meta.env.VITE_GA_MEASUREMENT_ID)
+  router.afterEach((to, _from, failure) => {
+    if (!failure) trackPageView(to.fullPath)
+  })
+}
 
 const app = createApp(App)
 

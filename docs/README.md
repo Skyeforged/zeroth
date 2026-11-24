@@ -15,6 +15,13 @@ Game rules in these docs were **confirmed by the user**. Do not guess or change 
 - GitHub Pages project site. `vite.config.ts` sets `base` from `VITE_BASE` (default `/zeroth/`). `.github/workflows/deploy.yml` builds on push to `main` with `VITE_BASE=/<repo-name>/`. The local branch is currently `master`.
 - State is stored in `localStorage` only. There is no backend.
 
+## Analytics
+
+- Google Analytics 4 via gtag.js, in `src/lib/analytics.ts` (`initAnalytics`, `trackPageView`, `trackEvent`), wired in `src/main.ts`.
+- On only in production builds **and** when `VITE_GA_MEASUREMENT_ID` (`G-XXXXXXXXXX`) is set at build time. The deploy workflow reads it from the GitHub repo variable `GA_MEASUREMENT_ID` (Settings > Secrets and variables > Actions > Variables). Unset means no script is loaded. Local dev never sends data.
+- Hash routing: automatic page views are off (`send_page_view: false`); `router.afterEach` sends one `page_view` per navigation with `page_path` = the hash route (for example `/essence/tracker`). In the GA4 data stream, turn off Enhanced measurement > "Page changes based on browser history events" to avoid double counting.
+- No cookie-consent banner yet.
+
 ## Saves and migrations
 
 - Every save (localStorage and the Tracker's Export JSON) is a versioned envelope `{ "version": N, "data": <payload> }` (`wrap` / `migrate` in `src/lib/versioned.ts`). A payload without a valid envelope (integer `version >= 1` and a `data` key) is **not a save**: on load it is ignored (the store starts empty and does not overwrite it), and Import rejects it with an error.

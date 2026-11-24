@@ -64,8 +64,31 @@ const iconOnly = computed(() => !props.label && !slots.default)
     color 0.15s;
 }
 
+/*
+ * Solid buttons draw their border as a clipped background instead of a CSS border: borders snap to
+ * device pixels but clip-path does not, so on fractional heights the clip ate the bottom border and
+ * the chamfer had no edge. The button paints --edge; ::before paints --face 1px inside it.
+ */
 .ui-button.solid {
+  --face: var(--fill);
+  --edge: var(--fill);
+  position: relative;
+  isolation: isolate;
+  border-color: transparent;
+  background: var(--edge);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--cut-size)), calc(100% - var(--cut-size)) 100%, 0 100%);
+}
+
+/* Inner cut is ~0.59px smaller so the diagonal edge stays 1px thick, like the straight sides. */
+.ui-button.solid::before {
+  --inner-cut: calc(var(--cut-size) - 0.59px);
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--face);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--inner-cut)), calc(100% - var(--inner-cut)) 100%, 0 100%);
+  transition: background 0.15s;
 }
 
 .ui-button.small {
@@ -82,9 +105,9 @@ const iconOnly = computed(() => !props.label && !slots.default)
   padding: 0.35rem;
 }
 
-.ui-button:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--fill) 85%, black);
-  border-color: color-mix(in srgb, var(--fill) 85%, black);
+.ui-button.solid:hover:not(:disabled) {
+  --face: color-mix(in srgb, var(--fill) 85%, black);
+  --edge: color-mix(in srgb, var(--fill) 85%, black);
 }
 
 .ui-button.outlined {
@@ -114,14 +137,14 @@ const iconOnly = computed(() => !props.label && !slots.default)
 
 /* Secondary solid is a neutral slab rather than a filled accent. */
 .ui-button.tone-secondary.solid {
-  background: var(--surface-hover);
-  border-color: var(--border-strong);
+  --face: var(--surface-hover);
+  --edge: var(--border-strong);
   color: var(--text);
 }
 
 .ui-button.tone-secondary.solid:hover:not(:disabled) {
-  background: var(--border);
-  border-color: var(--primary);
+  --face: var(--border);
+  --edge: var(--primary);
 }
 
 .ui-button.tone-secondary.outlined {

@@ -1,15 +1,33 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import PreEngraveStrip from '@/components/PreEngraveStrip.vue'
-import StatChip from '@/components/StatChip.vue'
+import PreEngraveStrip from '@/features/essence/components/PreEngraveStrip.vue'
+import StatChip from '@/features/essence/components/StatChip.vue'
 import UiCard from '@/components/ui/UiCard.vue'
 import UiIcon from '@/components/ui/UiIcon.vue'
 import UiTag from '@/components/ui/UiTag.vue'
 import WeaponIcon from '@/components/WeaponIcon.vue'
+import { LEVEL_MAX } from '@/features/essence/lib/constants'
 import { nameOf } from '@/lib/i18n'
-import type { AlluviumResult, TargetMatch } from '@/lib/optimizer'
+import type { AlluviumResult, TargetMatch } from '@/features/essence/lib/optimizer'
+import type { WeaponProgress } from '@/features/essence/lib/tracker'
 
-const props = defineProps<{ result: AlluviumResult; rank: number; best: boolean; showPartial: boolean }>()
+const props = defineProps<{
+  result: AlluviumResult
+  rank: number
+  best: boolean
+  showPartial: boolean
+  /** Tracker progress for a weapon id (custom essences have none). Display only, does not affect scoring. */
+  progressOf: (id: string) => WeaponProgress | undefined
+}>()
+
+function progress(m: TargetMatch): WeaponProgress | undefined {
+  return m.target.custom ? undefined : props.progressOf(m.target.id)
+}
+
+/** A weapon target the user has not obtained yet (custom essences are never "not owned"). */
+function notOwned(m: TargetMatch): boolean {
+  return !m.target.custom && !progress(m)
+}
 
 const slotLabel = { slot1: 'Main', slot2: 'Sub', slot3: 'Skill' } as const
 
@@ -40,12 +58,15 @@ const sections = computed<MatchSection[]>(() => {
 })
 
 function chips(m: TargetMatch, slotPrefix?: boolean) {
+  const p = progress(m)
   return m.required.map((slot) => {
     const name = nameOf('stats', m.target.essence[slot] ?? '')
     return {
       slot,
       label: slotPrefix ? `${slotLabel[slot]}: ${name}` : name,
       state: m.slots[slot] ? ('ok' as const) : ('missing' as const),
+      level: p ? p.levels[slot] : undefined,
+      max: LEVEL_MAX[slot],
     }
   })
 }
@@ -79,8 +100,16 @@ const points = computed(() =>
             <span class="who">
               <WeaponIcon v-if="!m.target.custom" :weapon-id="m.target.id" :size="28" />
               <strong>{{ m.target.label }}</strong>
+              <span v-if="notOwned(m)" class="not-owned">Not owned</span>
             </span>
-            <StatChip v-for="c in chips(m, s.slotPrefix)" :key="c.slot" :label="c.label" :state="c.state" />
+            <StatChip
+              v-for="c in chips(m, s.slotPrefix)"
+              :key="c.slot"
+              :label="c.label"
+              :state="c.state"
+              :level="c.level"
+              :max="c.max"
+            />
           </div>
         </section>
 
@@ -165,5 +194,12 @@ h4::before {
   align-items: center;
   gap: 0.4rem;
   min-width: min(10rem, 100%);
+}
+
+.not-owned {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 </style>

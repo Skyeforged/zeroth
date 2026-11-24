@@ -1,4 +1,4 @@
-import { POOL_SIZE } from '@/lib/constants'
+import { POOL_SIZE } from '@/features/essence/lib/constants'
 import { SLOTS, type EnergyAlluvium, type Locale, type NameKind, type StatsData, type Weapon } from '@/types/data'
 
 export interface ValidationResult {

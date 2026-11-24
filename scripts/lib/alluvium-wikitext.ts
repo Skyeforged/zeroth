@@ -14,7 +14,7 @@ import { buildStatLookup, toSnakeId, type Slot, type StatLookup } from './weapon
 export { buildStatLookup, toSnakeId }
 export type { Slot, StatLookup }
 
-/** Number of slot-3 stats per Energy Alluvium (same as `POOL_SIZE` in src/lib/constants.ts). */
+/** Number of slot-3 stats per Energy Alluvium (same as `POOL_SIZE` in src/features/essence/lib/constants.ts). */
 export const POOL_SIZE = 8
 
 export interface ParsedAlluvium {

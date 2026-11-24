@@ -1,10 +1,10 @@
-# Endfield Essence Tools
+# Zeroth
 
-Frontend-only Vue 3 + Vite + TypeScript app (Pinia, Vue Router, hand-written UI components in `src/components/ui/`, no component library) for Arknights: Endfield. Two features: an Essence Tracker and an Essence Farming Optimizer. Hosted as a static site on GitHub Pages.
+Zeroth is a frontend-only Vue 3 + Vite + TypeScript app (Pinia, Vue Router, hand-written UI components in `src/components/ui/`, no component library) for Arknights: Endfield. It is a collection of features, each in `src/features/<name>/` with routes under `/<name>/...` and a home page at `/`. Current feature: **Essence** (`src/features/essence/`: Tracker and Farming Optimizer). Hosted as a static site on GitHub Pages.
 
 **Read before changing anything:**
 
-- `docs/README.md`: stack, hosting, data contract, file map
+- `docs/README.md`: stack, hosting, feature folders and routing, data contract, file map
 - `docs/essence-tracker.md`: tracker rules, status logic, persistence
 - `docs/essence-optimizer.md`: engraving rules, scoring algorithm, UI
 - `docs/data-sync.md`: the weapon sync script, source tracking (`sourceRefs`, `sources.json`, `gaps.json`, `manifest.json`), safety rules

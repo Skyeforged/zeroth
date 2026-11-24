@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import StatusTag from '@/components/StatusTag.vue'
+import StatusTag from '@/features/essence/components/StatusTag.vue'
 import WeaponIcon from '@/components/WeaponIcon.vue'
 import { rarityColor } from '@/lib/rarity'
-import type { WeaponStatus } from '@/lib/status'
+import type { WeaponStatus } from '@/features/essence/lib/tracker'
 
 const props = defineProps<{
   weaponId: string

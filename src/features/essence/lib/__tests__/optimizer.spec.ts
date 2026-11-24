@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { combinations, rankAlluviums, type Target } from '@/lib/optimizer'
+import { combinations, rankAlluviums, type Target } from '@/features/essence/lib/optimizer'
 import type { EnergyAlluvium } from '@/types/data'
 
 const MAIN = ['str', 'int', 'will', 'main_attribute', 'agi']

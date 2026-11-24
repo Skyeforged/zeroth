@@ -3,7 +3,7 @@
  * No terminal, filesystem or Vue code lives here so it can be unit-tested with plain strings.
  */
 
-/** Slot-2 stats per Energy Alluvium (same as `POOL_SIZE` in src/lib/constants.ts). */
+/** Slot-2 stats per Energy Alluvium (same as `POOL_SIZE` in src/features/essence/lib/constants.ts). */
 export const POOL_SIZE = 8
 
 /** `3/8` style progress text for the menu. */

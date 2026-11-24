@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import UiTag from '@/components/ui/UiTag.vue'
-import { STATUS_LABEL, type WeaponStatus } from '@/lib/status'
+import { STATUS_LABEL, type WeaponStatus } from '@/features/essence/lib/tracker'
 
 defineProps<{ status: WeaponStatus }>()
 

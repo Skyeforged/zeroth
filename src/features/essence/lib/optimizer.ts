@@ -4,8 +4,8 @@ import {
   SCORE_GOOD,
   SCORE_PARTIAL,
   SCORE_PERFECT,
-} from '@/lib/constants'
-import { essenceSlots } from '@/lib/essence'
+} from '@/features/essence/lib/constants'
+import { essenceSlots } from '@/features/essence/lib/essence'
 import type { EnergyAlluvium, Id, Slot, Weapon } from '@/types/data'
 
 /** Something the user wants to farm an essence for: a weapon's essence or a custom essence. */

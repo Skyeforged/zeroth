@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import TrackerCard from '@/components/TrackerCard.vue'
+import TrackerCard from '@/features/essence/components/TrackerCard.vue'
 import UiButton from '@/components/ui/UiButton.vue'
 import UiInput from '@/components/ui/UiInput.vue'
 import UiMessage from '@/components/ui/UiMessage.vue'
 import UiSelect from '@/components/ui/UiSelect.vue'
 import { weapons } from '@/data'
-import { essenceSlots } from '@/lib/essence'
 import { nameOf } from '@/lib/i18n'
-import { deriveStatus, STATUS_LABEL, type WeaponStatus } from '@/lib/status'
-import { useTrackerStore } from '@/stores/tracker'
+import { deriveStatus, STATUS_LABEL, type WeaponStatus } from '@/features/essence/lib/tracker'
+import { useTrackerStore } from '@/features/essence/stores/tracker'
 import type { Slot } from '@/types/data'
 
 const tracker = useTrackerStore()
@@ -34,7 +33,7 @@ const rows = computed(() =>
       return {
         weapon,
         progress,
-        status: deriveStatus(progress, essenceSlots(weapon.essence)),
+        status: deriveStatus(progress),
         name: nameOf('weapons', weapon.id),
         rarity: weapon.rarity ?? 0,
       }
@@ -46,7 +45,7 @@ const rows = computed(() =>
 
 const summary = computed(() => {
   const counts: Record<WeaponStatus, number> = { unobtained: 0, obtained: 0, completed: 0 }
-  for (const w of weapons) counts[deriveStatus(tracker.get(w.id), essenceSlots(w.essence))]++
+  for (const w of weapons) counts[deriveStatus(tracker.get(w.id))]++
   return counts
 })
 

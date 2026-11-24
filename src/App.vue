@@ -3,17 +3,7 @@ import { computed } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import UiMessage from '@/components/ui/UiMessage.vue'
 import { validation } from '@/data'
-
-// Add new features here; the sidebar renders whatever is listed.
-const navGroups = [
-  {
-    label: 'Essence',
-    items: [
-      { to: '/tracker', label: 'Tracker' },
-      { to: '/optimizer', label: 'Farming Optimizer' },
-    ],
-  },
-]
+import { navGroups } from '@/router/nav'
 
 const route = useRoute()
 
@@ -33,10 +23,12 @@ const index = (i: number) => String(i + 1).padStart(2, '0')
   <div class="app-shell">
     <aside class="app-sidebar">
       <div class="brand">
-        <h1>
-          <span class="brand-mark">End<br />field</span>
-          <span class="brand-sub">Essence Tools</span>
-        </h1>
+        <RouterLink to="/" class="brand-link" aria-label="Zeroth home">
+          <h1>
+            <span class="brand-mark">Zeroth</span>
+            <span class="brand-sub">Arknights: Endfield</span>
+          </h1>
+        </RouterLink>
         <span class="tri-stripe" aria-hidden="true" />
       </div>
       <nav class="app-nav">

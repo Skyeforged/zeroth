@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import IconToggle from '@/components/IconToggle.vue'
-import StatLevel from '@/components/StatLevel.vue'
-import StatusTag from '@/components/StatusTag.vue'
+import StatLevel from '@/features/essence/components/StatLevel.vue'
+import StatusTag from '@/features/essence/components/StatusTag.vue'
 import WeaponIcon from '@/components/WeaponIcon.vue'
-import { LEVEL_MAX, LEVEL_MIN } from '@/lib/constants'
+import { LEVEL_MAX, LEVEL_MIN } from '@/features/essence/lib/constants'
 import { nameOf } from '@/lib/i18n'
 import { rarityColor } from '@/lib/rarity'
-import type { WeaponProgress, WeaponStatus } from '@/lib/status'
+import type { WeaponProgress, WeaponStatus } from '@/features/essence/lib/tracker'
 import { SLOTS, type Essence, type Slot } from '@/types/data'
 
 /** One weapon in the Tracker grid. Presentational: changes are emitted, the view writes them to the store. */
@@ -16,14 +16,15 @@ const props = defineProps<{
   name: string
   rarity?: number
   essence: Essence
-  progress: WeaponProgress
+  /** `undefined` when the weapon is not obtained (no record). */
+  progress: WeaponProgress | undefined
   status: WeaponStatus
   slotLabels: Record<Slot, string>
 }>()
 
 defineEmits<{
   level: [slot: Slot, value: number]
-  update: [patch: { obtained?: boolean; completedOverride?: boolean }]
+  update: [patch: { obtained?: boolean; completed?: boolean }]
 }>()
 
 const color = computed(() => rarityColor(props.rarity))
@@ -45,15 +46,15 @@ const color = computed(() => rarityColor(props.rarity))
           icon="box"
           label="Obtained"
           tone="info"
-          :model-value="progress.obtained"
+          :model-value="!!progress"
           @update:model-value="(v: boolean) => $emit('update', { obtained: v })"
         />
         <IconToggle
           icon="check-circle"
           label="Mark completed"
           tone="success"
-          :model-value="progress.completedOverride"
-          @update:model-value="(v: boolean) => $emit('update', { completedOverride: v })"
+          :model-value="progress?.completed ?? false"
+          @update:model-value="(v: boolean) => $emit('update', { completed: v })"
         />
       </div>
     </header>
@@ -69,10 +70,10 @@ const color = computed(() => rarityColor(props.rarity))
           :name="nameOf('stats', essence[slot]!)"
           :tone="slot"
           :slot-label="slotLabels[slot]"
-          :model-value="progress.levels[slot]"
+          :model-value="progress?.levels[slot] ?? LEVEL_MIN"
           :min="LEVEL_MIN"
           :max="LEVEL_MAX[slot]"
-          :disabled="!progress.obtained"
+          :disabled="!progress"
           @update:model-value="(v: number) => $emit('level', slot, v)"
         />
       </template>

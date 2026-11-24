@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import IconToggle from '@/components/IconToggle.vue'
-import StatChip from '@/components/StatChip.vue'
+import StatChip from '@/features/essence/components/StatChip.vue'
 import UiIcon from '@/components/ui/UiIcon.vue'
 import UiTag from '@/components/ui/UiTag.vue'
 import WeaponIcon from '@/components/WeaponIcon.vue'

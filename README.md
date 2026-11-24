@@ -1,6 +1,6 @@
-# Endfield Essence Tools
+# Zeroth
 
-Frontend-only Vue 3 app for Arknights: Endfield: an **Essence Tracker** and an **Essence Farming Optimizer**. Static SPA (hash routing), deployable to GitHub Pages.
+Frontend-only Vue 3 app for Arknights: Endfield. Current feature: **Essence** (an **Essence Tracker** and an **Essence Farming Optimizer**, under `src/features/essence/`). Static SPA (hash routing), deployable to GitHub Pages.
 
 ## Data
 

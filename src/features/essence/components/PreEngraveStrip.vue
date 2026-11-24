@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import StatChip from '@/components/StatChip.vue'
+import StatChip from '@/features/essence/components/StatChip.vue'
 import UiIcon from '@/components/ui/UiIcon.vue'
-import { ENGRAVING_MAIN_PICKS } from '@/lib/constants'
+import { ENGRAVING_MAIN_PICKS } from '@/features/essence/lib/constants'
 import { nameOf } from '@/lib/i18n'
-import type { Engraving, Lock } from '@/lib/optimizer'
+import type { Engraving, Lock } from '@/features/essence/lib/optimizer'
 
 const props = defineProps<{ engraving: Engraving; altLocks: Lock[] }>()
 

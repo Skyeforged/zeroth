@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import CustomEssenceForm from '@/components/CustomEssenceForm.vue'
-import AlluviumResultCard from '@/components/AlluviumResultCard.vue'
-import TargetCard from '@/components/TargetCard.vue'
+import CustomEssenceForm from '@/features/essence/components/CustomEssenceForm.vue'
+import AlluviumResultCard from '@/features/essence/components/AlluviumResultCard.vue'
+import TargetCard from '@/features/essence/components/TargetCard.vue'
 import UiButton from '@/components/ui/UiButton.vue'
 import UiCheckbox from '@/components/ui/UiCheckbox.vue'
 import UiInput from '@/components/ui/UiInput.vue'
 import UiMessage from '@/components/ui/UiMessage.vue'
-import WeaponTile from '@/components/WeaponTile.vue'
+import WeaponTile from '@/features/essence/components/WeaponTile.vue'
 import { alluviums, stats, weapons } from '@/data'
-import { essenceSlots, essenceStats } from '@/lib/essence'
+import { essenceSlots, essenceStats } from '@/features/essence/lib/essence'
 import { nameOf } from '@/lib/i18n'
-import { rankAlluviums, type Target } from '@/lib/optimizer'
-import { deriveStatus } from '@/lib/status'
+import { rankAlluviums, type Target } from '@/features/essence/lib/optimizer'
+import { deriveStatus } from '@/features/essence/lib/tracker'
 import { weaponTypeOptions } from '@/lib/weaponTypes'
-import { useOptimizerStore } from '@/stores/optimizer'
-import { useTrackerStore } from '@/stores/tracker'
+import { useOptimizerStore } from '@/features/essence/stores/optimizer'
+import { useTrackerStore } from '@/features/essence/stores/tracker'
 import type { Essence } from '@/types/data'
 
 const optimizer = useOptimizerStore()
@@ -43,7 +43,7 @@ const targets = computed<Target[]>(() => {
         id: weapon.id,
         label: nameOf('weapons', weapon.id),
         essence: weapon.essence,
-        onlySlot3: tracker.get(weapon.id).onlySlot3,
+        onlySlot3: optimizer.isShielded(weapon.id),
         priority: optimizer.isPriority(weapon.id),
         custom: false,
       },
@@ -53,7 +53,7 @@ const targets = computed<Target[]>(() => {
     id: c.id,
     label: c.name,
     essence: c.essence,
-    onlySlot3: c.onlySlot3,
+    onlySlot3: optimizer.isShielded(c.id),
     priority: optimizer.isPriority(c.id),
     custom: true,
   }))
@@ -65,7 +65,7 @@ const addable = computed(() =>
     .filter((w) => !optimizer.selectedIds.includes(w.id))
     .map((weapon) => ({
       weapon,
-      status: deriveStatus(tracker.get(weapon.id), essenceSlots(weapon.essence)),
+      status: deriveStatus(tracker.get(weapon.id)),
       name: nameOf('weapons', weapon.id),
     }))
     // Highest rarity first, then by name.
@@ -78,8 +78,7 @@ const addable = computed(() =>
 const results = computed(() => rankAlluviums(targets.value, alluviums, stats.slot1))
 
 function toggleShield(t: Target) {
-  if (t.custom) optimizer.setCustomShield(t.id, !t.onlySlot3)
-  else tracker.update(t.id, { onlySlot3: !t.onlySlot3 })
+  optimizer.toggleShield(t.id)
 }
 
 function remove(t: Target) {
@@ -221,6 +220,7 @@ const hasTargets = computed(() => targets.value.length > 0)
         :rank="i + 1"
         :best="i === 0 && r.points > 0"
         :show-partial="optimizer.showPartial"
+        :progress-of="(id: string) => tracker.get(id)"
       />
     </div>
   </section>

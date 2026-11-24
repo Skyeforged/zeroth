@@ -2,8 +2,11 @@
 import UiIcon from '@/components/ui/UiIcon.vue'
 import type { Slot } from '@/types/data'
 
-/** `tone` colours the chip by essence slot; `state` (Energy Alluvium cards) takes precedence over it. */
-defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot }>()
+/**
+ * `tone` colours the chip by essence slot; `state` (Energy Alluvium cards) takes precedence over it.
+ * `level` / `max` add a trailing "+N" (or "MAX") badge with the user's current Tracker level.
+ */
+defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot; level?: number; max?: number }>()
 </script>
 
 <template>
@@ -11,6 +14,14 @@ defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot }
     <UiIcon v-if="state === 'ok'" name="check" class="mark" />
     <UiIcon v-else-if="state === 'missing'" name="times" class="mark" />
     {{ label }}
+    <span
+      v-if="level !== undefined"
+      class="level"
+      :class="{ maxed: max !== undefined && level >= max }"
+      :title="`Current level: ${level}${max !== undefined ? ` / ${max}` : ''}`"
+    >
+      {{ max !== undefined && level >= max ? 'MAX' : `+${level}` }}
+    </span>
   </span>
 </template>
 
@@ -38,6 +49,21 @@ defineProps<{ label: string; state?: 'ok' | 'missing' | 'neutral'; tone?: Slot }
 
 .missing {
   color: var(--text-muted);
+}
+
+/* Current Tracker level, separated from the stat name by a hairline. */
+.level {
+  margin-left: 0.15rem;
+  padding-left: 0.4rem;
+  border-left: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.level.maxed {
+  color: var(--green-500);
 }
 
 .slot1,

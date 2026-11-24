@@ -141,7 +141,8 @@ describe('3-star weapons (no slot 2)', () => {
 
 describe('ranking and engraving output', () => {
   it('ranks by points, then by alluvium id, and drops the engraving when nothing matches', () => {
-    const results = rankAlluviums([target('w1', 'str', 9, 9)], [alluviumA, alluviumB], MAIN)
+    // 'str' is left out of the main stats, so nothing in alluvium A can drop (sub_9 / skill_9 are only in B).
+    const results = rankAlluviums([target('w1', 'str', 9, 9)], [alluviumA, alluviumB], ['int', 'will', 'agi', 'main_attribute'])
     expect(results.map((r) => r.alluviumId)).toEqual(['alluvium_b', 'alluvium_a'])
     expect(results[1]!.engraving).toBeNull()
   })
